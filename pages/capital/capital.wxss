@@ -1,0 +1,156 @@
+.capital.data-v-29cc88ca {
+    min-height: 100vh;
+    background-color: #f6f6f6;
+}
+
+.capital .page-background.data-v-29cc88ca {
+    height: 576rpx;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(180deg,rgba(120,240,184,.16),rgba(120,240,184,0));
+}
+
+.capital .balance-border.data-v-29cc88ca {
+    width: 690rpx;
+    height: 526rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    margin: 32rpx auto 0;
+    position: relative;
+}
+
+.capital .balance-border .button.detail.data-v-29cc88ca {
+    width: 118rpx;
+    height: 48rpx;
+    background: #f9ebd4;
+    border-radius: 200rpx 0rpx 0rpx 200rpx;
+    position: absolute;
+    right: 0;
+    top: 48rpx;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #836d39;
+    font-size: 24rpx;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.capital .balance-border .button.detail view.data-v-29cc88ca {
+    margin-left: 10rpx;
+}
+
+.capital .balance-border .balance-price.data-v-29cc88ca {
+    text-align: center;
+    font-size: 32rpx;
+    padding-top: 64rpx;
+    color: #999;
+}
+
+.capital .balance-border .balance-total.data-v-29cc88ca {
+    margin-top: 48rpx;
+    color: #333;
+    font-size: 96rpx;
+    text-align: center;
+}
+
+.capital .balance-border .button.withdrawal.data-v-29cc88ca {
+    width: 598rpx;
+    height: 96rpx;
+    background: #6b7ff7;
+    border-radius: 48rpx;
+    text-align: center;
+    line-height: 96rpx;
+    color: #fff;
+    font-size: 32rpx;
+    margin: 80rpx auto 0;
+}
+
+.capital .rules.data-v-29cc88ca {
+    width: 690rpx;
+    height: 386rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 36rpx 30rpx;
+    margin: 32rpx auto auto;
+}
+
+.capital .rules view.data-v-29cc88ca {
+    color: #999;
+    font-size: 24rpx;
+    margin-bottom: 10rpx;
+}
+
+.capital .rules .rules-flex.data-v-29cc88ca {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.capital .rules .rules-flex .rules-title.data-v-29cc88ca {
+    font-size: 36rpx!important;
+    color: #333!important;
+}
+
+.capital .rules .rules-flex .rules-border.data-v-29cc88ca {
+    width: 8rpx;
+    height: 36rpx;
+    background: #6b7ff7;
+    border-radius: 2rpx;
+    margin-right: 10rpx;
+}
+
+.capital .withdrawal-box.data-v-29cc88ca {
+    width: 600rpx;
+    min-height: 400rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    padding-bottom: 20rpx;
+}
+
+.capital .withdrawal-box .tips.data-v-29cc88ca {
+    font-size: 24rpx;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-weight: 400;
+    color: #999;
+    text-align: center;
+    margin-top: 16rpx;
+}
+
+.capital .withdrawal-box .title.data-v-29cc88ca {
+    font-size: 40rpx;
+    font-family: SourceHanSansCN-Medium,SourceHanSansCN;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    line-height: 40rpx;
+    height: 88rpx;
+    padding-top: 48rpx;
+}
+
+.capital .withdrawal-box .input-box.data-v-29cc88ca {
+    padding: 48rpx 56rpx 0;
+}
+
+.capital .withdrawal-box .input-box .input.data-v-29cc88ca {
+    height: 96rpx;
+    line-height: 96rpx;
+    font-size: 28rpx;
+    padding: 0 10rpx;
+    border-radius: 8rpx;
+    border: 2rpx solid #9b9b9b;
+}
+
+.capital .withdrawal-box .button.confirm.data-v-29cc88ca {
+    margin-top: 74rpx;
+    width: 360rpx;
+    height: 84rpx;
+    background: #6b7ff7;
+    border-radius: 42rpx;
+    line-height: 84rpx;
+    font-size: 32rpx;
+    color: #fff;
+    letter-spacing: 4rpx;
+}

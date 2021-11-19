@@ -1,0 +1,52 @@
+.consume-detail.data-v-57361c81 {
+    min-height: 100vh;
+}
+
+.consume-detail .list-box.data-v-57361c81 {
+    margin: 20rpx;
+}
+
+.consume-detail .list-box .item.data-v-57361c81 {
+    background: #fff;
+    height: 160rpx;
+    padding: 32rpx;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    border-bottom: 2rpx solid rgba(0,0,0,.06);
+}
+
+.consume-detail .list-box .item .info-text.data-v-57361c81 {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #333;
+}
+
+.consume-detail .list-box .item .info-text.income.data-v-57361c81 {
+    color: #f8852a;
+}
+
+.consume-detail .list-box .item .info-text.expend.data-v-57361c81 {
+    color: #999;
+}
+
+.consume-detail .list-box .item .left.data-v-57361c81 {
+    width: 70%;
+}
+
+.consume-detail .list-box .item .left .info-time.data-v-57361c81 {
+    margin-top: 22rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #999;
+}
+
+.consume-detail .list-box .item .right.data-v-57361c81 {
+    text-align: right;
+    width: 30%;
+}
+
+.consume-detail .empty-box.data-v-57361c81 {
+    height: 1000rpx;
+}

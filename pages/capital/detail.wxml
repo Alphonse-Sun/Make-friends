@@ -1,0 +1,18 @@
+<view class="capital-detail data-v-7479bd1d">
+    <u-navbar backIconColor="#101010" bind:__l="__l" class="data-v-7479bd1d" title="资金明细" titleColor="#101010" vueId="6bb54b95-1"></u-navbar>
+    <view class="list-box data-v-7479bd1d" wx:if="{{detailList.length>0}}">
+        <view class="item data-v-7479bd1d" wx:for="{{detailList}}" wx:key="index">
+            <view class="left data-v-7479bd1d">
+                <view class="info-text data-v-7479bd1d">{{item.note}}</view>
+                <view class="info-time data-v-7479bd1d">{{item.create_time}}</view>
+            </view>
+            <view class="right data-v-7479bd1d">
+                <view class="info-text income data-v-7479bd1d" wx:if="{{item.amount>0}}">{{'+'+item.amount+'元'}}</view>
+                <view class="info-text expend data-v-7479bd1d" wx:else>{{'-'+item.amount+'元'}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="empty-box data-v-7479bd1d" wx:else>
+        <u-empty bind:__l="__l" class="data-v-7479bd1d" mode="list" vueId="6bb54b95-2"></u-empty>
+    </view>
+</view>

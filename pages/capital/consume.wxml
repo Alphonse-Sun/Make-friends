@@ -1,0 +1,17 @@
+<view class="consume-detail data-v-57361c81">
+    <u-navbar backIconColor="#101010" bind:__l="__l" class="data-v-57361c81" customBack="{{handleBack}}" title="消费详情" titleColor="#101010" vueId="16daf3cc-1"></u-navbar>
+    <view class="list-box data-v-57361c81" wx:if="{{detailList.length>0}}">
+        <view class="item data-v-57361c81" wx:for="{{detailList}}" wx:key="index">
+            <view class="left data-v-57361c81">
+                <view class="info-text data-v-57361c81">{{item.note}}</view>
+                <view class="info-time data-v-57361c81">{{item.create_time}}</view>
+            </view>
+            <view class="right data-v-57361c81">
+                <view class="info-text income data-v-57361c81">{{item.pay_money+'元'}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="empty-box data-v-57361c81" wx:else>
+        <u-empty bind:__l="__l" class="data-v-57361c81" mode="list" vueId="16daf3cc-2"></u-empty>
+    </view>
+</view>

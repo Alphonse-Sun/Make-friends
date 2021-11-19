@@ -1,0 +1,32 @@
+<view class="capital data-v-29cc88ca">
+    <u-navbar backIconColor="#101010" background="{{background}}" bind:__l="__l" borderBottom="{{false}}" class="data-v-29cc88ca" customBack="{{handleBack}}" title="资金管理" titleColor="#101010" vueId="173d442e-1"></u-navbar>
+    <view class="page-background data-v-29cc88ca"></view>
+    <view class="balance-border data-v-29cc88ca">
+        <navigator class="button detail data-v-29cc88ca" hoverClass="none" url="/pages/capital/detail">
+            <u-icon bind:__l="__l" class="data-v-29cc88ca" color="#8B7544" name="rmb-circle" size="30" vueId="173d442e-2"></u-icon>
+            <view class="data-v-29cc88ca">明细</view>
+        </navigator>
+        <view class="balance-price data-v-29cc88ca">余额(元)</view>
+        <view class="balance-total data-v-29cc88ca">{{withdraw.balance||'0.00'}}</view>
+        <view bindtap="__e" class="button withdrawal data-v-29cc88ca" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">提现</view>
+    </view>
+    <view class="rules data-v-29cc88ca">
+        <view class="rules-flex data-v-29cc88ca">
+            <view class="rules-border data-v-29cc88ca"></view>
+            <view class="rules-title data-v-29cc88ca">提现说明</view>
+        </view>
+        <view class="data-v-29cc88ca" wx:for="{{config.withdrawal_desc}}" wx:key="index">{{item}}</view>
+    </view>
+    <u-popup bind:__l="__l" bind:input="__e" borderRadius="16" class="data-v-29cc88ca" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','show','$event',[] ] ] ] ] ]}}" mode="center" value="{{show}}" vueId="173d442e-3" vueSlots="{{['default']}}">
+        <view class="withdrawal-box data-v-29cc88ca">
+            <view class="title data-v-29cc88ca">提现金额</view>
+            <view class="input-box data-v-29cc88ca">
+                <input bindinput="__e" class="input data-v-29cc88ca" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','money','$event',[] ] ] ] ] ]}}" placeholder="请输入提现金额" placeholderStyle="color: #DEDEDE;" type="digit" value="{{money}}"></input>
+            </view>
+            <button bindtap="__e" class="button confirm data-v-29cc88ca" data-event-opts="{{[ [ 'tap',[ ['handleWithdraw'] ] ] ]}}">提现</button>
+            <view class="tips data-v-29cc88ca">{{'最低提现金额 '+withdraw.withdrawal_min+' 元'}}</view>
+            <u-icon bind:__l="__l" bind:click="__e" class="data-v-29cc88ca" data-event-opts="{{[ [ '^click',[ ['e1'] ] ] ]}}" name="close" size="28" style="position:absolute;top:20rpx;right:20rpx;color:#000000;" vueId="{{'173d442e-4'+','+'173d442e-3'}}"></u-icon>
+        </view>
+    </u-popup>
+    <u-toast bind:__l="__l" class="data-v-29cc88ca vue-ref" data-ref="uToast" vueId="173d442e-5"></u-toast>
+</view>

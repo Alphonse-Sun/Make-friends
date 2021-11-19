@@ -1,0 +1,53 @@
+.capital-detail.data-v-7479bd1d {
+    min-height: 100vh;
+    background: #f8f6f6;
+}
+
+.capital-detail .list-box.data-v-7479bd1d {
+    margin: 20rpx;
+}
+
+.capital-detail .list-box .item.data-v-7479bd1d {
+    background: #fff;
+    height: 160rpx;
+    padding: 32rpx;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    border-bottom: 2rpx solid rgba(0,0,0,.06);
+}
+
+.capital-detail .list-box .item .info-text.data-v-7479bd1d {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #333;
+}
+
+.capital-detail .list-box .item .info-text.income.data-v-7479bd1d {
+    color: #f8852a;
+}
+
+.capital-detail .list-box .item .info-text.expend.data-v-7479bd1d {
+    color: #999;
+}
+
+.capital-detail .list-box .item .left.data-v-7479bd1d {
+    width: 70%;
+}
+
+.capital-detail .list-box .item .left .info-time.data-v-7479bd1d {
+    margin-top: 22rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #999;
+}
+
+.capital-detail .list-box .item .right.data-v-7479bd1d {
+    text-align: right;
+    width: 30%;
+}
+
+.capital-detail .empty-box.data-v-7479bd1d {
+    height: 1000rpx;
+}
