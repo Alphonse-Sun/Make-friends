@@ -1,5 +1,6 @@
 # 换密盲盒交友小程序
-目前代码免费开源,工作联系QQ:1308115931
+<p align="center">目前代码免费开源,工作联系QQ:1308115931</p>
+
 ![image](https://user-images.githubusercontent.com/94306098/142584261-63e42ebb-1c43-4260-a545-cac05c511631.png)
 ![image](https://user-images.githubusercontent.com/94306098/142439623-4b0e27ba-5a3c-49e1-8dd5-5a0d987bfd17.png)
 <p align="center">★ 需要重新上传小程序提交审核 ★
