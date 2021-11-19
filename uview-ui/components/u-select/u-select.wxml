@@ -1,0 +1,20 @@
+<view class="u-select data-v-690e2e06">
+    <u-popup bind:__l="__l" bind:close="__e" bind:input="__e" class="data-v-690e2e06" data-event-opts="{{[ [ '^close',[ ['close'] ] ],[ '^input',[ [ '__set_model',[ '','value','$event',[] ] ] ] ] ]}}" length="auto" maskCloseAble="{{maskCloseAble}}" mode="bottom" popup="{{false}}" safeAreaInsetBottom="{{safeAreaInsetBottom}}" value="{{value}}" vueId="097ce174-1" vueSlots="{{['default']}}" zIndex="{{uZIndex}}">
+        <view class="u-select data-v-690e2e06">
+            <view catchtouchmove="__e" class="u-select__header data-v-690e2e06" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ] ]}}">
+                <view bindtap="__e" class="u-select__header__cancel u-select__header__btn data-v-690e2e06" data-event-opts="{{[ [ 'tap',[ [ 'getResult',['cancel'] ] ] ] ]}}" hoverClass="u-hover-class" hoverStayTime="{{150}}" style="{{'color:'+cancelColor+';'}}">{{''+cancelText+''}}</view>
+                <view class="u-select__header__title data-v-690e2e06">{{''+title+''}}</view>
+                <view catchtap="__e" catchtouchmove="__e" class="u-select__header__confirm u-select__header__btn data-v-690e2e06" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ],[ 'tap',[ [ 'getResult',['confirm'] ] ] ] ]}}" hoverClass="u-hover-class" hoverStayTime="{{150}}" style="{{'color:'+(moving?cancelColor:confirmColor)+';'}}">{{''+confirmText+''}}</view>
+            </view>
+            <view class="u-select__body data-v-690e2e06">
+                <picker-view bindchange="__e" bindpickend="__e" bindpickstart="__e" class="u-select__body__picker-view data-v-690e2e06" data-event-opts="{{[ [ 'change',[ [ 'columnChange',['$event'] ] ] ],[ 'pickstart',[ [ 'pickstart',['$event'] ] ] ],[ 'pickend',[ [ 'pickend',['$event'] ] ] ] ]}}" value="{{defaultSelector}}">
+                    <picker-view-column class="data-v-690e2e06" wx:for="{{columnData}}" wx:key="index">
+                        <view class="u-select__body__picker-view__item data-v-690e2e06" wx:for="{{item}}" wx:for-index="index1" wx:for-item="item1" wx:key="index1">
+                            <view class="u-line-1 data-v-690e2e06">{{item1[labelName]}}</view>
+                        </view>
+                    </picker-view-column>
+                </picker-view>
+            </view>
+        </view>
+    </u-popup>
+</view>

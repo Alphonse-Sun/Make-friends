@@ -1,0 +1,17 @@
+<view class="u-drawer data-v-4b631af3" hoverStopPropagation="{{true}}" style="{{$root.s0}}" wx:if="{{visibleSync}}">
+    <u-mask bind:__l="__l" bind:click="__e" class="data-v-4b631af3" customStyle="{{maskCustomStyle}}" data-event-opts="{{[ [ '^click',[ ['maskClick'] ] ] ]}}" duration="{{duration}}" maskClickAble="{{maskCloseAble}}" show="{{showDrawer&&mask}}" vueId="3fc9d948-1" zIndex="{{uZindex-2}}"></u-mask>
+    <view catchtap="__e" catchtouchmove="__e" class="{{['u-drawer-content','data-v-4b631af3',safeAreaInsetBottom?'safe-area-inset-bottom':'','u-drawer-'+mode,showDrawer?'u-drawer-content-visible':'',zoom&&mode=='center'?'u-animation-zoom':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'modeCenterClose',['$0'],['mode'] ],[ '',['$event'] ] ] ],[ 'touchmove',[ [ '',['$event'] ] ] ] ]}}" style="{{$root.s1}}">
+        <view catchtap="__e" catchtouchmove="__e" class="u-mode-center-box data-v-4b631af3" data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ],[ 'touchmove',[ [ '',['$event'] ] ] ] ]}}" style="{{$root.s2}}" wx:if="{{mode=='center'}}">
+            <u-icon bind:__l="__l" bind:click="__e" class="{{['u-close','data-v-4b631af3','u-close--'+closeIconPos]}}" color="{{closeIconColor}}" data-event-opts="{{[ [ '^click',[ ['close'] ] ] ]}}" name="{{closeIcon}}" size="{{closeIconSize}}" vueId="3fc9d948-2" wx:if="{{closeable}}"></u-icon>
+            <scroll-view class="u-drawer__scroll-view data-v-4b631af3" scrollY="true">
+                <slot></slot>
+            </scroll-view>
+        </view>
+        <scroll-view class="u-drawer__scroll-view data-v-4b631af3" scrollY="true" wx:else>
+            <slot></slot>
+        </scroll-view>
+        <view bindtap="__e" class="{{['u-close','data-v-4b631af3','u-close--'+closeIconPos]}}" data-event-opts="{{[ [ 'tap',[ [ 'close',['$event'] ] ] ] ]}}">
+            <u-icon bind:__l="__l" class="data-v-4b631af3" color="{{closeIconColor}}" name="{{closeIcon}}" size="{{closeIconSize}}" vueId="3fc9d948-3" wx:if="{{mode!='center'&&closeable}}"></u-icon>
+        </view>
+    </view>
+</view>

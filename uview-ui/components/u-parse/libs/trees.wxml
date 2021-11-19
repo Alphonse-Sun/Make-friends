@@ -1,0 +1,64 @@
+<view class="{{[ 'interlayer '+(c||'') ]}}" style="{{s}}">
+    <block wx:for="{{nodes}}" wx:for-index="i" wx:for-item="n" wx:key="i">
+        <view catchtap="__e" class="{{['_img '+n.attrs.class]}}" data-attrs="{{n.attrs}}" data-event-opts="{{[ [ 'tap',[ [ 'imgtap',['$event'] ] ] ] ]}}" style="{{n.attrs.style}}" wx:if="{{n.name=='img'}}">
+            <rich-text nodes="{{[ {attrs:{ src:loading&&(ctrl[i]||0)<2?loading:lazyLoad&&!ctrl[i]?placeholder:ctrl[i]==3?errorImg:n.attrs.src||'',alt:n.attrs.alt||'',width:n.attrs.width||'',style:'-webkit-touch-callout:none;max-width:100%;display:block'+(n.attrs.height?';height:'+n.attrs.height:'') },name:'img'} ]}}" wx:if="{{ctrl[i]!=0}}"></rich-text>
+            <image binderror="__e" bindload="__e" class="_image" data-event-opts="{{[ [ 'load',[ [ 'loadImg',['$event'] ] ] ],[ 'error',[ [ 'error',['$event'] ] ] ] ]}}" data-i="{{i}}" data-index="{{n.attrs.i}}" data-source="img" lazyLoad="{{lazyLoad}}" showMenuByLongpress="{{!n.attrs.ignore}}" src="{{lazyLoad&&!ctrl[i]?placeholder:n.attrs.src}}"></image>
+        </view>
+        <block wx:else>
+            <text decode="{{true}}" wx:if="{{n.type=='text'}}">{{n.text}}</text>
+            <block wx:else>
+                <text wx:if="{{n.name=='br'}}">
+</text>
+                <block wx:else>
+                    <view catchtap="__e" class="{{[ '_video '+(n.attrs.class||'') ]}}" data-event-opts="{{[ [ 'tap',[ [ '_loadVideo',['$event'] ] ] ] ]}}" data-i="{{i}}" id="{{n.attrs.id}}" style="{{n.attrs.style}}" wx:if="{{(n.lazyLoad&&!n.attrs.autoplay||n.name=='video'&&!loadVideo)&&ctrl[i]==undefined}}"></view>
+                    <block wx:else>
+                        <video autoplay="{{n.attrs.autoplay||ctrl[i]==0}}" binderror="__e" bindplay="__e" class="{{[n.attrs.class]}}" controls="{{n.attrs.controls}}" data-event-opts="{{[ [ 'error',[ [ 'error',['$event'] ] ] ],[ 'play',[ [ 'play',['$event'] ] ] ] ]}}" data-i="{{i}}" data-id="{{n.attrs.id}}" data-source="video" id="{{n.attrs.id}}" loop="{{n.attrs.loop}}" muted="{{n.attrs.muted}}" poster="{{n.attrs.poster}}" src="{{n.attrs.source[ctrl[i]||0]}}" style="{{n.attrs.style}}" unitId="{{n.attrs['unit-id']}}" wx:if="{{n.name=='video'}}"></video>
+                        <block wx:else>
+                            <audio author="{{n.attrs.author}}" autoplay="{{n.attrs.autoplay}}" binderror="__e" bindplay="__e" class="{{['vue-ref-in-for',n.attrs.class]}}" controls="{{n.attrs.controls}}" data-event-opts="{{[ [ 'error',[ [ 'error',['$event'] ] ] ],[ 'play',[ [ 'play',['$event'] ] ] ] ]}}" data-i="{{i}}" data-id="{{n.attrs.id}}" data-ref="{{n.attrs.id}}" data-source="audio" loop="{{n.attrs.loop}}" name="{{n.attrs.name}}" poster="{{n.attrs.poster}}" src="{{n.attrs.source[ctrl[i]||0]}}" style="{{n.attrs.style}}" wx:if="{{n.name=='audio'}}"></audio>
+                            <block wx:else>
+                                <view catchtap="__e" class="{{[ '_a '+(n.attrs.class||'') ]}}" data-attrs="{{n.attrs}}" data-event-opts="{{[ [ 'tap',[ [ 'linkpress',['$event'] ] ] ] ]}}" hoverClass="_hover" id="{{n.attrs.id}}" style="{{n.attrs.style}}" wx:if="{{n.name=='a'}}">
+                                    <trees bind:__l="__l" c="_span" class="_span" nodes="{{n.children}}" vueId="{{'2d22aa1f-1-'+i}}"></trees>
+                                </view>
+                                <block wx:else>
+                                    <view class="{{[n.attrs.class]}}" id="{{n.attrs.id}}" style="{{(n.attrs.style||'')+';display:flex;flex-direction:row'}}" wx:if="{{n.name=='li'}}">
+                                        <view class="_ol-bef" wx:if="{{n.type=='ol'}}">{{n.num}}</view>
+                                        <view class="_ul-bef" wx:else>
+                                            <view class="_ul-p1" wx:if="{{n.floor%3==0}}">█</view>
+                                            <block wx:else>
+                                                <view class="_ul-p2" wx:if="{{n.floor%3==2}}"></view>
+                                                <view class="_ul-p1" style="border-radius:50%;" wx:else>█</view>
+                                            </block>
+                                        </view>
+                                        <trees bind:__l="__l" c="_li" class="_li" lazyLoad="{{lazyLoad}}" loading="{{loading}}" nodes="{{n.children}}" vueId="{{'2d22aa1f-2-'+i}}"></trees>
+                                    </view>
+                                    <block wx:else>
+                                        <view class="{{[n.attrs.class]}}" id="{{n.attrs.id}}" style="{{(n.attrs.style||'')+';display:grid'}}" wx:if="{{n.name=='table'&&n.c&&n.flag}}">
+                                            <trees bind:__l="__l" c="{{cell.attrs.class}}" class="{{[cell.attrs.class]}}" nodes="{{cell.children}}" s="{{cell.attrs.style}}" style="{{cell.attrs.style}}" vueId="{{'2d22aa1f-3-'+i+'-'+n}}" wx:for="{{n.children}}" wx:for-index="n" wx:for-item="cell" wx:key="n"></trees>
+                                        </view>
+                                        <block wx:else>
+                                            <view class="{{[n.attrs.class]}}" id="{{n.attrs.id}}" style="{{(n.attrs.style||'')+';display:table'}}" wx:if="{{n.name=='table'&&n.c}}">
+                                                <view class="{{[tbody.attrs.class]}}" style="{{(tbody.attrs.style||'')+(tbody.name[0]=='t'?';display:table-'+(tbody.name=='tr'?'row':'row-group'):'')}}" wx:for="{{n.children}}" wx:for-index="o" wx:for-item="tbody" wx:key="o">
+                                                    <view class="{{[tr.attrs.class]}}" style="{{(tr.attrs.style||'')+(tr.name[0]=='t'?';display:table-'+(tr.name=='tr'?'row':'cell'):'')}}" wx:for="{{tbody.children}}" wx:for-index="p" wx:for-item="tr" wx:key="p">
+                                                        <trees bind:__l="__l" nodes="{{tr.children}}" vueId="{{'2d22aa1f-4-'+i+'-'+o+'-'+p}}" wx:if="{{tr.name=='td'}}"></trees>
+                                                        <block wx:else>
+                                                            <trees bind:__l="__l" c="{{td.attrs.class}}" class="{{[td.attrs.class]}}" nodes="{{td.children}}" s="{{(td.attrs.style||'')+(td.name[0]=='t'?';display:table-'+(td.name=='tr'?'row':'cell'):'')}}" style="{{(td.attrs.style||'')+(td.name[0]=='t'?';display:table-'+(td.name=='tr'?'row':'cell'):'')}}" vueId="{{'2d22aa1f-5-'+i+'-'+o+'-'+p+'-'+q}}" wx:for="{{tr.children}}" wx:for-index="q" wx:for-item="td" wx:key="q"></trees>
+                                                        </block>
+                                                    </view>
+                                                </view>
+                                            </view>
+                                            <block wx:else>
+                                                <rich-text class="{{['_p __'+n.name]}}" id="{{n.attrs.id}}" nodes="{{[n]}}" wx:if="{{handler.use(n)}}"></rich-text>
+                                                <trees bind:__l="__l" c="{{(n.attrs.id||'')+' _'+n.name+' '+(n.attrs.class||'')}}" class="{{[ (n.attrs.id||'')+' _'+n.name+' '+(n.attrs.class||'') ]}}" lazyLoad="{{lazyLoad}}" loading="{{loading}}" nodes="{{n.children}}" s="{{n.attrs.style}}" style="{{n.attrs.style}}" vueId="{{'2d22aa1f-6-'+i}}" wx:else></trees>
+                                            </block>
+                                        </block>
+                                    </block>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </block>
+    </block>
+</view>
+<wxs module="handler" src="handler.wxs" />

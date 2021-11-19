@@ -1,0 +1,11 @@
+<view bindtap="__e" class="u-image data-v-1f15ab5c" data-event-opts="{{[ [ 'tap',[ [ 'onClick',['$event'] ] ] ] ]}}" style="{{$root.s0}}">
+    <image binderror="__e" bindload="__e" class="u-image__image data-v-1f15ab5c" data-event-opts="{{[ [ 'error',[ [ 'onErrorHandler',['$event'] ] ] ],[ 'load',[ [ 'onLoadHandler',['$event'] ] ] ] ]}}" lazyLoad="{{lazyLoad}}" mode="{{mode}}" src="{{src}}" style="{{'border-radius:'+(shape=='circle'?'50%':$root.g0)+';'}}" wx:if="{{!isError}}"></image>
+    <view class="u-image__loading data-v-1f15ab5c" style="{{'border-radius:'+(shape=='circle'?'50%':$root.g1)+';'+'background-color:'+this.bgColor+';'}}" wx:if="{{showLoading&&loading}}">
+        <slot name="loading" wx:if="{{$slots.loading}}"></slot>
+        <u-icon bind:__l="__l" class="data-v-1f15ab5c" height="{{height}}" name="{{loadingIcon}}" vueId="249d8bbe-1" width="{{width}}" wx:else></u-icon>
+    </view>
+    <view class="u-image__error data-v-1f15ab5c" style="{{'border-radius:'+(shape=='circle'?'50%':$root.g2)+';'}}" wx:if="{{showError&&isError&&!loading}}">
+        <slot name="error" wx:if="{{$slots.error}}"></slot>
+        <u-icon bind:__l="__l" class="data-v-1f15ab5c" height="{{height}}" name="{{errorIcon}}" vueId="249d8bbe-2" width="{{width}}" wx:else></u-icon>
+    </view>
+</view>

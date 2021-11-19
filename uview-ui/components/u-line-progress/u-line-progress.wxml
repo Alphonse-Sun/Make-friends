@@ -1,0 +1,8 @@
+<view class="u-progress data-v-899a79c6" style="{{'border-radius:'+(round?'100rpx':0)+';'+'height:'+height+'rpx'+';'+'background-color:'+inactiveColor+';'}}">
+    <view class="{{['u-active','data-v-899a79c6',type?'u-type-'+type+'-bg':'',striped?'u-striped':'',striped&&stripedActive?'u-striped-active':'']}}" style="{{$root.s0}}">
+        <slot wx:if="{{$slots.default||$slots.$default}}"></slot>
+        <block wx:else>
+            <block wx:if="{{showPercent}}">{{''+percent+'%'+''}}</block>
+        </block>
+    </view>
+</view>

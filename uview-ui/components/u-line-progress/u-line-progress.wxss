@@ -1,0 +1,57 @@
+.u-progress.data-v-899a79c6 {
+    overflow: hidden;
+    height: 15px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: 100%;
+    border-radius: 100rpx;
+}
+
+.u-active.data-v-899a79c6,.u-progress.data-v-899a79c6 {
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.u-active.data-v-899a79c6 {
+    width: 0;
+    height: 100%;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    justify-items: flex-end;
+    justify-content: space-around;
+    font-size: 20rpx;
+    color: #fff;
+    transition: all .4s ease;
+}
+
+.u-striped.data-v-899a79c6 {
+    background-image: linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);
+    background-size: 39px 39px;
+}
+
+.u-striped-active.data-v-899a79c6 {
+    animation: progress-stripes-data-v-899a79c6 2s linear infinite;
+}
+
+@-webkit-keyframes progress-stripes-data-v-899a79c6 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 39px 0;
+    }
+}
+
+@keyframes progress-stripes-data-v-899a79c6 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 39px 0;
+    }
+}

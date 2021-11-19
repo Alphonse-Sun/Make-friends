@@ -1,0 +1,9 @@
+<u-popup bind:__l="__l" bind:close="__e" bind:input="__e" borderRadius="{{borderRadius}}" class="data-v-4606ab42" data-event-opts="{{[ [ '^close',[ ['popupClose'] ] ],[ '^input',[ [ '__set_model',[ '','value','$event',[] ] ] ] ] ]}}" length="auto" maskCloseAble="{{maskCloseAble}}" mode="bottom" popup="{{false}}" safeAreaInsetBottom="{{safeAreaInsetBottom}}" value="{{value}}" vueId="430f7e86-1" vueSlots="{{['default']}}" zIndex="{{uZIndex}}">
+    <view class="u-tips u-border-bottom data-v-4606ab42" style="{{$root.s0}}" wx:if="{{tips.text}}">{{''+tips.text+''}}</view>
+    <view bindtap="__e" catchtouchmove="__e" class="{{['u-action-sheet-item','u-line-1','data-v-4606ab42',index<list.length-1?'u-border-bottom':'']}}" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ],[ 'tap',[ [ 'itemClick',[index] ] ] ] ]}}" hoverStayTime="{{150}}" style="{{item.s1}}" wx:for="{{$root.l0}}" wx:key="index">
+        <text class="data-v-4606ab42">{{item.$orig.text}}</text>
+        <text class="u-action-sheet-item__subtext u-line-1 data-v-4606ab42" wx:if="{{item.$orig.subText}}">{{item.$orig.subText}}</text>
+    </view>
+    <view class="u-gab data-v-4606ab42" wx:if="{{cancelBtn}}"></view>
+    <view bindtap="__e" catchtouchmove="__e" class="u-actionsheet-cancel u-action-sheet-item data-v-4606ab42" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ],[ 'tap',[ [ 'close',['$event'] ] ] ] ]}}" hoverClass="u-hover-class" hoverStayTime="{{150}}" wx:if="{{cancelBtn}}">{{cancelText}}</view>
+</u-popup>

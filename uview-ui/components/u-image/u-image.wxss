@@ -1,0 +1,28 @@
+.u-image.data-v-1f15ab5c {
+    position: relative;
+    transition: opacity .5s ease-in-out;
+}
+
+.u-image__image.data-v-1f15ab5c {
+    width: 100%;
+    height: 100%;
+}
+
+.u-image__error.data-v-1f15ab5c,.u-image__loading.data-v-1f15ab5c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+    color: #909399;
+    font-size: 46rpx;
+}

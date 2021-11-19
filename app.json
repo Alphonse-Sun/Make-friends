@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/login",
+    "pages/mine/index",
+    "pages/mine/promoter",
+    "pages/mine/swap",
+    "pages/mine/home",
+    "pages/mine/like",
+    "pages/mine/question",
+    "pages/mine/focus",
+    "pages/capital/capital",
+    "pages/capital/consume",
+    "pages/capital/detail",
+    "pages/mine/team",
+    "pages/web/web",
+    "pages/release/index",
+    "pages/index/detail",
+    "pages/mine/secret-detail",
+    "pages/mine/change-detail",
+    "pages/mine/like-detail",
+    "pages/mine/sex-setting",
+    "pages/index/explain"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "宜品盲盒",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#2E2B2B",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/icon-index.png",
+        "selectedIconPath": "static/tabbar/icon-index-active.png"
+      },
+      {
+        "pagePath": "pages/release/index",
+        "text": "",
+        "iconPath": "static/tabbar/icon-record.png",
+        "selectedIconPath": "static/tabbar/icon-record-active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/tabbar/icon-mine.png",
+        "selectedIconPath": "static/tabbar/icon-mine-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+    "desc": "您的位置信息将用于小程序获取位置定位"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

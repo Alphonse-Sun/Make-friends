@@ -1,0 +1,9 @@
+<view class="u-tabs data-v-d6a79240" style="{{'z-index:'+zIndex+';'+'background:'+bgColor+';'}}">
+    <scroll-view class="u-scroll-view data-v-d6a79240" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="{{'z-index:'+zIndex+1+';'}}">
+        <view class="{{['u-tabs-scroll-box','data-v-d6a79240',!isScroll?'u-tabs-scorll-flex':'']}}">
+            <view bindtap="__e" class="{{['u-tabs-item','data-v-d6a79240',preId+index]}}" data-event-opts="{{[ [ 'tap',[ [ 'emit',[index] ] ] ] ]}}" style="{{item.s0}}" wx:for="{{$root.l0}}" wx:key="index">
+                <u-badge bind:__l="__l" class="data-v-d6a79240" count="{{item.$orig[count]||item.$orig['count']||0}}" offset="{{offset}}" size="mini" vueId="{{'f54eb0b4-1-'+index}}"></u-badge>{{''+( item.$orig[name]||item.$orig['name'] )+''}}</view>
+            <view class="u-scroll-bar data-v-d6a79240" style="{{$root.s1}}" wx:if="{{showBar}}"></view>
+        </view>
+    </scroll-view>
+</view>

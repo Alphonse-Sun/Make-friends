@@ -1,0 +1,19 @@
+<view class="u-upload data-v-2f010004" wx:if="{{!disabled}}">
+    <view class="u-list-item u-preview-wrap data-v-2f010004" style="{{'width:'+$root.g0+';'+'height:'+$root.g1+';'}}" wx:if="{{showUploadList}}" wx:for="{{lists}}" wx:key="index">
+        <view catchtap="__e" class="u-delete-icon data-v-2f010004" data-event-opts="{{[ [ 'tap',[ [ 'deleteItem',[index] ] ] ] ]}}" style="{{'background:'+delBgColor+';'}}" wx:if="{{deletable}}">
+            <u-icon bind:__l="__l" class="u-icon data-v-2f010004" color="{{delColor}}" name="{{delIcon}}" size="20" vueId="{{'cd7a84b4-1-'+index}}"></u-icon>
+        </view>
+        <u-line-progress bind:__l="__l" class="u-progress data-v-2f010004" height="16" percent="{{item.progress}}" showPercent="{{false}}" vueId="{{'cd7a84b4-2-'+index}}" wx:if="{{showProgress&&item.progress>0&&!item.error}}"></u-line-progress>
+        <view catchtap="__e" class="u-error-btn data-v-2f010004" data-event-opts="{{[ [ 'tap',[ [ 'retry',[index] ] ] ] ]}}" wx:if="{{item.error}}">点击重试</view>
+        <image catchtap="__e" class="u-preview-image data-v-2f010004" data-event-opts="{{[ [ 'tap',[ [ 'doPreviewImage',[item.url||item.path,index] ] ] ] ]}}" mode="{{imageMode}}" src="{{item.url||item.path}}" wx:if="{{!item.isImage}}"></image>
+    </view>
+    <slot name="file"></slot>
+    <scoped-slots-file bind:__l="__l" class="scoped-ref" file="{{lists}}"></scoped-slots-file>
+    <view bindtap="__e" class="data-v-2f010004" data-event-opts="{{[ [ 'tap',[ [ 'selectFile',['$event'] ] ] ] ]}}" style="display:inline-block;" wx:if="{{maxCount>lists.length}}">
+        <slot name="addBtn"></slot>
+        <view class="u-list-item u-add-wrap data-v-2f010004" hoverClass="u-add-wrap__hover" hoverStayTime="150" style="{{'width:'+$root.g2+';'+'height:'+$root.g3+';'}}" wx:if="{{!customBtn}}">
+            <u-icon bind:__l="__l" class="u-add-btn data-v-2f010004" name="plus" size="40" vueId="cd7a84b4-3"></u-icon>
+            <view class="u-add-tips data-v-2f010004">{{uploadText}}</view>
+        </view>
+    </view>
+</view>
