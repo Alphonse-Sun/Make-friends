@@ -1,0 +1,8 @@
+<view class="copy-right data-v-0184e3dc">
+    <view class="header data-v-0184e3dc">
+        <view class="line data-v-0184e3dc"></view>
+        <image class="logo data-v-0184e3dc" src="{{config.logo}}"></image>
+        <view class="line data-v-0184e3dc"></view>
+    </view>
+    <view class="slogan data-v-0184e3dc">正品保障 后顾无忧</view>
+</view>

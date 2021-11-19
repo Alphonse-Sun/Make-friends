@@ -1,0 +1,35 @@
+.copy-right.data-v-0184e3dc {
+    padding: 48rpx 0;
+}
+
+.copy-right .header.data-v-0184e3dc {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.copy-right .header .line.data-v-0184e3dc {
+    width: 80rpx;
+    height: 2rpx;
+    background-color: #c3c2c1;
+}
+
+.copy-right .header .logo.data-v-0184e3dc {
+    width: 214rpx;
+    height: 36rpx;
+    margin: 0 20rpx;
+}
+
+.copy-right .slogan.data-v-0184e3dc {
+    height: 32rpx;
+    font-size: 24rpx;
+    color: #c3c2c1;
+    line-height: 32rpx;
+    text-align: center;
+    margin-top: 22rpx;
+}

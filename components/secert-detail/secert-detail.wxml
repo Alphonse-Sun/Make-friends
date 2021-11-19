@@ -1,0 +1,71 @@
+<view>
+    <view class="user-title">
+        <view class="user-flex">
+            <u-avatar bind:__l="__l" size="96" src="{{data.user.avatarUrl}}" vueId="3d9cb8f0-1"></u-avatar>
+            <view class="user-name">
+                <view>{{data.user.nickName}}</view>
+                <view wx:if="{{type==2}}">该用户和你交换了秘密</view>
+            </view>
+        </view>
+        <block wx:if="{{type==0||type==2}}">
+            <view bindtap="__e" class="follow" data-event-opts="{{[ [ 'tap',[ [ 'follow',['$0'],['data.user_id'] ] ] ] ]}}" wx:if="{{data.user.is_follow==0}}">
+                <u-icon bind:__l="__l" name="plus" size="30" vueId="3d9cb8f0-2"></u-icon>
+                <view>关注</view>
+            </view>
+            <view bindtap="__e" class="follow" data-event-opts="{{[ [ 'tap',[ [ 'unfollow',['$0'],['data.user_id'] ] ] ] ]}}" wx:else>
+                <u-icon bind:__l="__l" name="checkbox-mark" size="30" vueId="3d9cb8f0-3"></u-icon>
+                <view>已关注</view>
+            </view>
+        </block>
+    </view>
+    <view class="city">
+        <view class="city-border" wx:if="{{data.is_same_city==1}}">
+            <u-image bind:__l="__l" height="40" src="/static/index/address.png" vueId="3d9cb8f0-4" width="40"></u-image>
+            <view>同城</view>
+        </view>
+        <view>
+            <image class="gender" src="/static/index/girl.png" wx:if="{{data.user.gender==2}}"></image>
+            <image class="gender" src="/static/index/boy.png" wx:if="{{data.user.gender==1}}"></image>
+        </view>
+    </view>
+    <view class="label">
+        <text wx:for="{{data.tags}}" wx:key="index">{{'#'+item}}</text>
+    </view>
+    <view class="subtitle">{{data.title}}</view>
+    <block wx:if="{{data.is_show==1}}">
+        <view class="user-content">
+            <view class="secret">她/他的秘密</view>
+            <view class="intro">{{data.content}}</view>
+            <view class="secret-pic">
+                <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'previewImg',[index] ] ] ] ]}}" src="{{item}}" wx:for="{{data.images}}" wx:key="index"></image>
+            </view>
+        </view>
+        <view class="wechat">
+            <view wx:if="{{data.weixin!=''}}">{{'微信号: '+data.weixin}}</view>
+            <view wx:if="{{data.phone!=''}}">{{'手机号: '+data.phone}}</view>
+            <view bindtap="__e" class="wechatCopy" data-event-opts="{{[ [ 'tap',[ [ 'copyNum',['$event'] ] ] ] ]}}" wx:if="{{type==0||type==2}}">
+                <u-image bind:__l="__l" height="36" src="/static/index/copy.png" vueId="3d9cb8f0-5" width="36"></u-image>
+                <view>复制</view>
+            </view>
+        </view>
+    </block>
+    <view class="empty-list" wx:else>
+        <u-image bind:__l="__l" height="330" src="/static/index/empty.png" vueId="3d9cb8f0-6" width="536"></u-image>
+        <view>需要对方同意才能看到秘密哦!</view>
+    </view>
+    <view class="share-bottom" wx:if="{{type==1}}">
+        <view class="share-flex">
+            <u-image bind:__l="__l" height="40" src="/static/mine/like-icon.png" vueId="3d9cb8f0-7" width="40"></u-image>
+            <view>{{data.like_number}}</view>
+        </view>
+        <view class="share-flex">
+            <u-image bind:__l="__l" height="40" src="/static/mine/share-icon.png" vueId="3d9cb8f0-8" width="40"></u-image>
+            <view>{{data.share_number}}</view>
+        </view>
+        <view class="share-flex">
+            <u-image bind:__l="__l" height="36" src="/static/mine/change-icon.png" vueId="3d9cb8f0-9" width="36"></u-image>
+            <view>{{data.swap_number}}</view>
+        </view>
+    </view>
+    <view class="change-time" wx:if="{{type==2}}">{{'交换时间: '+data.create_time}}</view>
+</view>

@@ -1,0 +1,48 @@
+.custom-tabbar-wrap.data-v-3f8609c8 {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.custom-tabbar-wrap .blank-block.data-v-3f8609c8 {
+    height: 100rpx;
+}
+
+.custom-tabbar-wrap .custom-tabbar.data-v-3f8609c8 {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    padding: 20rpx 55rpx env(safe-area-inset-bottom);
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #fff;
+    box-shadow: 0 -4rpx 20rpx 0 rgba(56,66,85,.06);
+    border-radius: 32rpx 32rpx 0 0;
+}
+
+.custom-tabbar-wrap .custom-tabbar.data-v-3f8609c8,.custom-tabbar-wrap .custom-tabbar .item.data-v-3f8609c8 {
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.custom-tabbar-wrap .custom-tabbar .item.data-v-3f8609c8 {
+    -webkit-box-flex: 1;
+    flex: 1;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.custom-tabbar-wrap .custom-tabbar .item .title.data-v-3f8609c8 {
+    font-size: 22rpx;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-weight: 400;
+    color: #2e2b2b;
+}

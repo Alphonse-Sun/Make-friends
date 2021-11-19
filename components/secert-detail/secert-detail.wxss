@@ -1,0 +1,216 @@
+.user-title {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 32rpx;
+}
+
+.user-title,.user-title .user-flex {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.user-title .user-flex {
+    font-size: 32rpx;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    color: #333;
+}
+
+.user-title .user-flex .user-name {
+    margin-left: 20rpx;
+}
+
+.user-title .user-flex .user-name view:nth-child(2) {
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #999;
+}
+
+.user-title .follow {
+    height: 64rpx;
+    background: #fbef4e;
+    border-radius: 50rpx;
+    border: 3rpx solid #333;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 28rpx;
+    color: #333;
+    padding: 0 20rpx;
+}
+
+.user-title .follow view:nth-child(2) {
+    margin-left: 20rpx;
+}
+
+.city {
+    margin-bottom: 20rpx;
+}
+
+.city,.city .city-border {
+    display: flex;
+}
+
+.city .city-border {
+    width: 132rpx;
+    height: 48rpx;
+    background: rgba(246,198,67,.16);
+    border-radius: 8rpx;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #333;
+}
+
+.city .gender {
+    width: 40rpx;
+    height: 40rpx;
+    border: 4rpx solid rgba(252,143,89,.16);
+    border-radius: 8rpx;
+    margin-left: 16rpx;
+}
+
+.label {
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #fc8f59;
+    margin-bottom: 20rpx;
+}
+
+.subtitle {
+    font-size: 32rpx;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    color: #333;
+    margin-bottom: 28rpx;
+}
+
+.user-content {
+    background: #f6f6f6;
+    border-radius: 16rpx;
+    padding: 32rpx 24rpx 0;
+}
+
+.user-content .secret {
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    color: #333;
+    border-bottom: 2rpx solid #dedede;
+    padding-bottom: 20rpx;
+    margin-bottom: 38rpx;
+}
+
+.user-content .intro {
+    color: #666;
+    margin-bottom: 32rpx;
+}
+
+.user-content .intro,.wechat {
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+}
+
+.wechat {
+    height: 84rpx;
+    background: #f6f6f6;
+    border-radius: 16rpx;
+    padding: 14rpx 14rpx 14rpx 24rpx;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    color: #333;
+    margin-top: 32rpx;
+}
+
+.wechat,.wechat .wechatCopy {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.wechat .wechatCopy {
+    width: 134rpx;
+    height: 56rpx;
+    background: #6b7ff7;
+    border-radius: 8rpx;
+    padding: 10rpx 16rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #fff;
+}
+
+.empty-list {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 32rpx;
+}
+
+.empty-list view:nth-child(2) {
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #c3c2c1;
+    margin-top: 24rpx;
+}
+
+.secret-pic {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.secret-pic image {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 12rpx;
+    margin-right: 18rpx;
+    margin-bottom: 20rpx;
+}
+
+.secret-pic image:nth-child(4n) {
+    margin-right: 0;
+}
+
+.share-bottom {
+    padding: 0 80rpx;
+    margin-top: 48rpx;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.share-bottom,.share-bottom .share-flex {
+    display: flex;
+}
+
+.share-bottom .share-flex {
+    width: 144rpx;
+    height: 64rpx;
+    padding-left: 10rpx;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #999;
+}
+
+.share-bottom .share-flex view:nth-child(2) {
+    margin-left: 10rpx;
+}
+
+.change-time {
+    margin-top: 32rpx;
+    padding-top: 22rpx;
+    border-top: 2rpx solid #f6f6f6;
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #666;
+}

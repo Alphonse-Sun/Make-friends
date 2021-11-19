@@ -1,0 +1,53 @@
+.item.data-v-ab06888e {
+    width: 330rpx;
+    height: 456rpx;
+    margin-bottom: 30rpx;
+    position: relative;
+}
+
+.item .background.data-v-ab06888e {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 330rpx;
+    height: 456rpx;
+    background: linear-gradient(180deg,transparent,rgba(0,0,0,.5));
+    border-radius: 16rpx;
+}
+
+.item .info-box.data-v-ab06888e {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20rpx;
+}
+
+.item .info-box .intro.data-v-ab06888e {
+    max-height: 72rpx;
+    font-size: 28rpx;
+    color: #fff;
+    line-height: 36rpx;
+}
+
+.item .info-box .info.data-v-ab06888e {
+    height: 48rpx;
+    margin-top: 16rpx;
+}
+
+.item .info-box .info .count.data-v-ab06888e {
+    height: 28rpx;
+    font-size: 24rpx;
+    color: #fff;
+    line-height: 28rpx;
+    margin-left: 10rpx;
+}
+
+.item .info-box .info .share-info.data-v-ab06888e {
+    margin-left: 28rpx;
+}
+
+.item .info-box .info .share-info .icon.data-v-ab06888e {
+    width: 36rpx;
+    height: 30rpx;
+}

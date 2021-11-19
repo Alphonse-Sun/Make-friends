@@ -1,0 +1,15 @@
+<view class="service-box data-v-f30f626a" style="{{background}}">
+    <view class="tips data-v-f30f626a">
+        <text class="bold data-v-f30f626a">{{config.service_slogan}}</text>
+    </view>
+    <view class="btn-box flex-rsc data-v-f30f626a">
+        <button bindtap="__e" class="button message flex-rcc data-v-f30f626a" data-event-opts="{{[ [ 'tap',[ ['handleService'] ] ] ]}}" openType="contact" sendMessageImg="{{config.card_img}}" sendMessagePath="/pages/index/index" sendMessageTitle="{{config.card_title}}" showMessageCard="true">
+            <image class="icon data-v-f30f626a" src="../../static/mine/icon-message.png"></image>
+            <text class="data-v-f30f626a">联系客服</text>
+        </button>
+        <view bindtap="__e" class="button phone flex-rcc data-v-f30f626a" data-event-opts="{{[ [ 'tap',[ ['handleCall'] ] ] ]}}">
+            <image class="icon data-v-f30f626a" src="../../static/mine/icon-phone.png"></image>
+            <text class="data-v-f30f626a">电话咨询</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+<view bindtap="__e" class="item data-v-ab06888e" data-event-opts="{{[ [ 'tap',[ [ 'viewDetail',['$0','$1'],['item.secret_id','item.user_id'] ] ] ] ]}}">
+    <u-image bind:__l="__l" borderRadius="16" class="data-v-ab06888e" height="456" mode="aspectFill" src="{{item.background_image}}" vueId="7bc567bc-1" width="330"></u-image>
+    <view class="background data-v-ab06888e"></view>
+    <view class="info-box data-v-ab06888e">
+        <view class="intro two-line data-v-ab06888e">{{item.title}}</view>
+        <view class="info flex-rsc data-v-ab06888e" wx:if="{{join}}">
+            <view class="like-info flex-rc data-v-ab06888e">
+                <u-icon bind:__l="__l" class="data-v-ab06888e" color="#FFFFFF" name="heart" size="28" vueId="7bc567bc-2"></u-icon>
+                <text class="count data-v-ab06888e">{{item.like_number}}</text>
+            </view>
+            <u-avatar bind:__l="__l" class="data-v-ab06888e" size="48" src="{{item.user.avatarUrl}}" vueId="7bc567bc-3"></u-avatar>
+        </view>
+        <view class="info flex-rc data-v-ab06888e" wx:else>
+            <view class="like-info flex-rc data-v-ab06888e">
+                <u-icon bind:__l="__l" class="data-v-ab06888e" color="#FFFFFF" name="heart" size="28" vueId="7bc567bc-4"></u-icon>
+                <text class="count data-v-ab06888e">{{item.like_number}}</text>
+            </view>
+            <view class="share-info flex-rc data-v-ab06888e">
+                <image class="icon data-v-ab06888e" src="../../static/mine/icon-release-share.png"></image>
+                <text class="count data-v-ab06888e">{{item.share_number}}</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="custom-tabbar-wrap data-v-3f8609c8">
+    <view class="blank-block data-v-3f8609c8"></view>
+    <view class="custom-tabbar data-v-3f8609c8">
+        <view bindtap="__e" class="item data-v-3f8609c8" data-event-opts="{{[ [ 'tap',[ [ 'changeTab',[i] ] ] ] ]}}" wx:for="{{tabbars}}" wx:for-index="i" wx:key="i">
+            <u-image bind:__l="__l" class="data-v-3f8609c8" fade="{{false}}" height="48rpx" src="{{item.selectedIconPath}}" vueId="{{'d4ea00e8-1-'+i}}" width="48rpx" wx:if="{{current===i}}"></u-image>
+            <u-image bind:__l="__l" class="data-v-3f8609c8" fade="{{false}}" height="48rpx" src="{{item.iconPath}}" vueId="{{'d4ea00e8-2-'+i}}" width="48rpx" wx:else></u-image>
+            <view class="title data-v-3f8609c8">{{item.text}}</view>
+        </view>
+    </view>
+</view>
