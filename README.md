@@ -37,9 +37,9 @@
   <p> 消息加密方式:兼容模式 </p>
   <p> 数据格式:JSON </p>
   
-  数据周期性更新:https://s.friends.alphonse.top </p>
-  数据预拉取:https://s.friends.alphonse.top </p>
-  业务域名:https://s.friends.alphonse.top </p>
+  <p> 数据周期性更新:https://s.friends.alphonse.top </p>
+  <p> 数据预拉取:https://s.friends.alphonse.top </p>
+  <p> 业务域名:https://s.friends.alphonse.top </p>
   (业务域名文件验证请发送到:alphonsesun@yeah.net/标题:交友小程序文件验证,24小时内处理!)
   
   
