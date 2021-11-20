@@ -8,7 +8,9 @@
 适用于酒吧,宾馆等交友场景!
 </p>
 
-![小程序体验版](https://user-images.githubusercontent.com/94306098/142716973-9e83f64e-4d0d-4164-9739-7d1f2bf0718a.jpg)
+<div align="center">
+   <img src="https://user-images.githubusercontent.com/94306098/142716973-9e83f64e-4d0d-4164-9739-7d1f2bf0718a.jpg" alt="image">
+</div>
 
 <p align="center">
 扫码体验</p>
