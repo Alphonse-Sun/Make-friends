@@ -1,0 +1,92 @@
+.container {
+    padding-top: 192rpx;
+}
+
+.container .title {
+    font-size: 40rpx;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    color: #333;
+    text-align: center;
+}
+
+.container .subtitle {
+    margin-top: 16rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #a0a2aa;
+    text-align: center;
+    margin-bottom: 116rpx;
+}
+
+.container .change-gender {
+    text-align: center;
+}
+
+.container .change-gender .img-border {
+    width: 176rpx;
+    height: 176rpx;
+    position: relative;
+    margin: auto;
+}
+
+.container .change-gender .img-border .gender-img {
+    width: 176rpx;
+    height: 176rpx;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 0 48rpx 0 rgba(74,176,125,.16);
+}
+
+.container .change-gender .img-border .select-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 52rpx;
+    height: 52rpx;
+}
+
+.container .change-gender .gender-name {
+    color: #999;
+}
+
+.container .change-gender .gender-name,.container .change-gender .gender-names {
+    margin-top: 24rpx;
+    font-size: 32rpx;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    margin-bottom: 48rpx;
+}
+
+.container .change-gender .gender-names {
+    color: #333;
+}
+
+.container .change-gender .gender-border {
+    width: 610rpx;
+    height: 4rpx;
+    margin: auto;
+}
+
+.container .skip {
+    margin-top: 86rpx;
+    font-size: 32rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #6b7ff7;
+    text-align: center;
+}
+
+.container .open {
+    margin: 32rpx auto;
+    width: 376rpx;
+    height: 96rpx;
+    background: rgba(107,127,247,.24);
+    border-radius: 16rpx;
+    text-align: center;
+    line-height: 96rpx;
+    font-size: 32rpx;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    color: #fff;
+}
+
+.container .sign {
+    background-color: #6b7ff7;
+}

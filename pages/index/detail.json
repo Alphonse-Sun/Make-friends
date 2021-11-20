@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "查看秘密",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "usingComponents": {
+        "secert-detail": "/components/secert-detail/secert-detail"
+    }
+}

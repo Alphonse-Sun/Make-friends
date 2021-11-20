@@ -1,0 +1,48 @@
+<view class="focus data-v-dac3d190">
+    <u-navbar backIconColor="#101010" background="{{background}}" bind:__l="__l" borderBottom="{{false}}" class="data-v-dac3d190" customBack="{{handleBack}}" title="{{userInfo.nickName}}" titleColor="#101010" vueId="7745a75e-1"></u-navbar>
+    <view class="tabs-box data-v-dac3d190">
+        <u-tabs-swiper activeColor="#101010" barHeight="4" barWidth="330" bind:__l="__l" bind:change="__e" class="data-v-dac3d190 vue-ref" current="{{current}}" data-event-opts="{{[ [ '^change',[ ['tabsChange'] ] ] ]}}" data-ref="uTabs" fontSize="32" height="96" inactiveColor="#999999" isScroll="{{false}}" list="{{tabs}}" vueId="7745a75e-2"></u-tabs-swiper>
+    </view>
+    <swiper bindanimationfinish="__e" bindtransition="__e" class="swiper-box data-v-dac3d190" current="{{swiperCurrent}}" data-event-opts="{{[ [ 'transition',[ [ 'transition',['$event'] ] ] ],[ 'animationfinish',[ [ 'animationfinish',['$event'] ] ] ] ]}}" style="{{swiperHeight}}">
+        <swiper-item class="swiper-item data-v-dac3d190">
+            <scroll-view bindscrolltolower="__e" class="data-v-dac3d190" data-event-opts="{{[ [ 'scrolltolower',[ [ 'onreachBottom',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="{{swiperHeight}}">
+                <view class="list data-v-dac3d190" wx:if="{{followedList.length>0}}">
+                    <view class="item followed flex-rsc data-v-dac3d190" wx:for="{{followedList}}" wx:for-index="i" wx:key="i">
+                        <view bindtap="__e" class="user flex-rc data-v-dac3d190" data-event-opts="{{[ [ 'tap',[ [ 'home',['$0'],[ [ ['followedList','',i,'followUsers.id'] ] ] ] ] ] ]}}">
+                            <u-avatar bind:__l="__l" class="data-v-dac3d190" size="96" src="{{item.followUsers.avatarUrl}}" vueId="{{'7745a75e-3-'+i}}"></u-avatar>
+                            <text class="name bold data-v-dac3d190">{{item.followUsers.nickName}}</text>
+                        </view>
+                        <view class="button data-v-dac3d190">已关注</view>
+                    </view>
+                </view>
+                <view class="empty-box data-v-dac3d190" style="{{swiperHeight}}" wx:else>
+                    <u-empty bind:__l="__l" class="data-v-dac3d190" mode="list" vueId="7745a75e-4"></u-empty>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item class="swiper-item data-v-dac3d190">
+            <scroll-view bindscrolltolower="__e" class="data-v-dac3d190" data-event-opts="{{[ [ 'scrolltolower',[ [ 'onreachBottom',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="{{swiperHeight}}">
+                <view class="list data-v-dac3d190" wx:if="{{fansList.length>0}}">
+                    <view class="item fans flex-rsc data-v-dac3d190" wx:for="{{fansList}}" wx:for-index="i" wx:key="i">
+                        <view bindtap="__e" class="user flex-rc data-v-dac3d190" data-event-opts="{{[ [ 'tap',[ [ 'home',['$0'],[ [ ['fansList','',i,'fansUsers.id'] ] ] ] ] ] ]}}">
+                            <u-avatar bind:__l="__l" class="data-v-dac3d190" size="96" src="{{item.fansUsers.avatarUrl}}" vueId="{{'7745a75e-5-'+i}}"></u-avatar>
+                            <view class="info-box data-v-dac3d190">
+                                <view class="name bold data-v-dac3d190">{{item.fansUsers.nickName}}</view>
+                                <view class="tips flex-rc data-v-dac3d190">
+                                    <image class="icon data-v-dac3d190" src="../../static/mine/icon-follow.png"></image>
+                                    <text class="data-v-dac3d190">该户用关注了你</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view bindtap="__e" class="button follow data-v-dac3d190" data-event-opts="{{[ [ 'tap',[ [ 'handleFollow',[i,'$0',1],[ [ ['fansList','',i] ] ] ] ] ] ]}}" wx:if="{{item.is_return===0}}">回关</view>
+                        <view bindtap="__e" class="button unfollow data-v-dac3d190" data-event-opts="{{[ [ 'tap',[ [ 'handleFollow',[i,'$0',0],[ [ ['fansList','',i] ] ] ] ] ] ]}}" wx:else>取消关注</view>
+                    </view>
+                </view>
+                <view class="empty-box data-v-dac3d190" style="{{swiperHeight}}" wx:else>
+                    <u-empty bind:__l="__l" class="data-v-dac3d190" mode="list" vueId="7745a75e-6"></u-empty>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+    <u-toast bind:__l="__l" class="data-v-dac3d190 vue-ref" data-ref="uToast" vueId="7745a75e-7"></u-toast>
+</view>

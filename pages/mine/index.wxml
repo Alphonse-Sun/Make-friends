@@ -1,0 +1,110 @@
+<view class="mine">
+    <view class="blank-block"></view>
+    <view class="user-info flex-cc">
+        <view class="base flex-cc" wx:if="{{!userInfo.nickName}}">
+            <image class="avatar" src="/static/mine/def-avatar.png"></image>
+            <view bindtap="__e" class="sync" data-event-opts="{{[ [ 'tap',[ [ 'getUserProfile',['$event'] ] ] ] ]}}">同步微信资料</view>
+        </view>
+        <view class="base flex-cc" wx:else>
+            <image bindtap="__e" class="avatar" data-event-opts="{{[ [ 'tap',[ [ 'getUserProfile',['$event'] ] ] ] ]}}" src="{{userInfo.avatarUrl}}"></image>
+            <image class="icon sex" src="../../static/mine/icon-sex-woman.png" wx:if="{{userInfo.gender===2}}"></image>
+            <image class="icon sex" src="../../static/mine/icon-sex-man.png" wx:if="{{userInfo.gender===1}}"></image>
+            <view class="text name">{{userInfo.nickName}}</view>
+        </view>
+        <view class="list flex-rc">
+            <view bindtap="__e" class="item flex-cc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/like'] ] ] ] ]}}">
+                <view class="text">{{userInfo.like_number}}</view>
+                <view class="label">点赞</view>
+            </view>
+            <view bindtap="__e" class="item flex-cc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/focus'] ] ] ] ]}}">
+                <view class="text">{{userInfo.follow_number}}</view>
+                <view class="label">关注</view>
+            </view>
+            <view bindtap="__e" class="item flex-cc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/focus?type=fans'] ] ] ] ]}}">
+                <view class="text">{{userInfo.fans_number}}</view>
+                <view class="label">粉丝</view>
+            </view>
+        </view>
+    </view>
+    <view class="section-box">
+        <view class="block flex-rs">
+            <view bindtap="__e" class="item money" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/capital/capital'] ] ] ] ]}}">
+                <view class="label flex-rs">
+                    <text>资金管理</text>
+                    <u-icon bind:__l="__l" color="#333333" name="arrow-right" size="32" vueId="2efac497-1"></u-icon>
+                </view>
+                <view class="intro">分享可获得分佣</view>
+            </view>
+            <view bindtap="__e" class="item team" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/team'] ] ] ] ]}}">
+                <view class="label flex-rs">
+                    <text>我的团队</text>
+                    <u-icon bind:__l="__l" color="#FFFFFF" name="arrow-right" size="32" vueId="2efac497-2"></u-icon>
+                </view>
+                <view class="intro">进入查看团队人员</view>
+            </view>
+        </view>
+        <view bindtap="__e" class="home-page flex-rsc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/home?user_id='+userInfo.user_id] ] ] ] ]}}">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-home.png"></image>
+                <text class="bold">个人主页</text>
+            </view>
+            <u-icon bind:__l="__l" color="#333333" name="arrow-right" size="32" vueId="2efac497-3"></u-icon>
+        </view>
+    </view>
+    <view class="nav-list">
+        <view bindtap="__e" class="item flex-rsc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/swap'] ] ] ] ]}}">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-swap.png"></image>
+                <text class="text bold">我的交换</text>
+            </view>
+            <u-icon bind:__l="__l" color="#B1B4B2" name="arrow-right" size="32" vueId="2efac497-4"></u-icon>
+        </view>
+        <view bindtap="__e" class="item flex-rsc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/promoter'] ] ] ] ]}}" wx:if="{{userInfo.is_promoter===0}}">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-promoter.png"></image>
+                <text class="text bold">成为推广员</text>
+            </view>
+            <u-icon bind:__l="__l" color="#B1B4B2" name="arrow-right" size="32" vueId="2efac497-5"></u-icon>
+        </view>
+        <button class="item flex-rsc" openType="share">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-share.png"></image>
+                <text class="text bold">分享好友</text>
+            </view>
+            <u-icon bind:__l="__l" color="#B1B4B2" name="arrow-right" size="32" vueId="2efac497-6"></u-icon>
+        </button>
+        <view bindtap="__e" class="item flex-rsc" data-event-opts="{{[ [ 'tap',[ ['handleFocus'] ] ] ]}}">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-focus.png"></image>
+                <text class="text bold">关注公众号</text>
+            </view>
+            <u-icon bind:__l="__l" color="#B1B4B2" name="arrow-right" size="32" vueId="2efac497-7"></u-icon>
+        </view>
+        <view bindtap="__e" class="item flex-rsc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/sex-setting'] ] ] ] ]}}">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-sex.png"></image>
+                <text class="text bold">性别设置</text>
+            </view>
+            <u-icon bind:__l="__l" color="#B1B4B2" name="arrow-right" size="32" vueId="2efac497-8"></u-icon>
+        </view>
+        <view bindtap="__e" class="item flex-rsc" data-event-opts="{{[ [ 'tap',[ [ 'router',['/pages/mine/question'] ] ] ] ]}}">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-help.png"></image>
+                <text class="text bold">常见问题</text>
+            </view>
+            <u-icon bind:__l="__l" color="#B1B4B2" name="arrow-right" size="32" vueId="2efac497-9"></u-icon>
+        </view>
+        <view bindtap="__e" class="item flex-rsc" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+            <view class="label flex-rc">
+                <image class="icon" src="../../static/mine/icon-service.png"></image>
+                <text class="text bold">在线客服</text>
+            </view>
+            <u-icon bind:__l="__l" color="#B1B4B2" name="arrow-right" size="32" vueId="2efac497-10"></u-icon>
+        </view>
+    </view>
+    <copy-right bind:__l="__l" vueId="2efac497-11"></copy-right>
+    <u-popup bind:__l="__l" bind:close="__e" bind:input="__e" borderRadius="16" data-event-opts="{{[ [ '^close',[ ['e1'] ] ],[ '^input',[ [ '__set_model',[ '','showService','$event',[] ] ] ] ] ]}}" mode="center" value="{{showService}}" vueId="2efac497-12" vueSlots="{{['default']}}">
+        <service bind:__l="__l" vueId="{{'2efac497-13'+','+'2efac497-12'}}"></service>
+    </u-popup>
+    <custom-tabbar bind:__l="__l" current="{{2}}" vueId="2efac497-14"></custom-tabbar>
+</view>

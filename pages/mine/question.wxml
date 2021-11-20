@@ -1,0 +1,22 @@
+<view class="page question data-v-7dd84746">
+    <view class="list data-v-7dd84746" wx:if="{{questionList.length>0}}">
+        <view bindtap="__e" class="item data-v-7dd84746" data-event-opts="{{[ [ 'tap',[ [ 'handleOpen',[i] ] ] ] ]}}" wx:for="{{questionList}}" wx:for-index="i" wx:key="i">
+            <view class="header flex-rsc data-v-7dd84746">
+                <view class="title flex-rc data-v-7dd84746">
+                    <image class="data-v-7dd84746" src="../../static/mine/icon-question.png"></image>
+                    <text class="data-v-7dd84746">{{item.title}}</text>
+                </view>
+                <u-icon bind:__l="__l" class="data-v-7dd84746" color="#999999" name="arrow-up" size="32" vueId="{{'e1bf62a6-1-'+i}}" wx:if="{{item.show}}"></u-icon>
+                <u-icon bind:__l="__l" class="data-v-7dd84746" color="#999999" name="arrow-down" size="32" vueId="{{'e1bf62a6-2-'+i}}" wx:else></u-icon>
+            </view>
+            <view class="body flex-rs data-v-7dd84746" wx:if="{{item.show}}">
+                <image class="icon data-v-7dd84746" src="../../static/mine/icon-answer.png"></image>
+                <view class="content data-v-7dd84746">{{item.answer}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="empty-box data-v-7dd84746" wx:else>
+        <u-empty bind:__l="__l" class="data-v-7dd84746" mode="list" vueId="e1bf62a6-3"></u-empty>
+    </view>
+    <u-toast bind:__l="__l" class="data-v-7dd84746 vue-ref" data-ref="uToast" vueId="e1bf62a6-4"></u-toast>
+</view>

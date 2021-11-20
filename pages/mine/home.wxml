@@ -1,0 +1,41 @@
+<view class="home data-v-8cdd6908">
+    <u-navbar backIconColor="#101010" background="{{background}}" bind:__l="__l" borderBottom="{{false}}" class="data-v-8cdd6908" customBack="{{handleBack}}" title="个人主页" titleColor="#101010" vueId="10cc7858-1"></u-navbar>
+    <view class="blank-block data-v-8cdd6908" style="{{'height:'+userHeight+'px;'}}"></view>
+    <view class="{{['user-info','flex-cc','data-v-8cdd6908',follow?'follow':'']}}">
+        <view class="base flex-cc data-v-8cdd6908">
+            <image class="avatar data-v-8cdd6908" src="{{user.avatarUrl}}"></image>
+            <image class="icon sex data-v-8cdd6908" src="../../static/mine/icon-sex-woman.png" wx:if="{{user.gender===2}}"></image>
+            <image class="icon sex data-v-8cdd6908" src="../../static/mine/icon-sex-man.png" wx:if="{{user.gender===1}}"></image>
+            <view class="text name data-v-8cdd6908">{{user.nickName}}</view>
+        </view>
+        <view bindtap="__e" class="button follow flex-rcc data-v-8cdd6908" data-event-opts="{{[ [ 'tap',[ [ 'handleFollow',[1] ] ] ] ]}}" wx:if="{{follow&&user.is_follow===0}}">
+            <u-icon bind:__l="__l" class="data-v-8cdd6908" color="#333333" name="plus" size="28" vueId="10cc7858-2"></u-icon>
+            <text class="data-v-8cdd6908">关注</text>
+        </view>
+        <view bindtap="__e" class="button follow flex-rcc data-v-8cdd6908" data-event-opts="{{[ [ 'tap',[ [ 'handleFollow',[0] ] ] ] ]}}" wx:if="{{user.is_follow===1}}">
+            <u-icon bind:__l="__l" class="data-v-8cdd6908" color="#333333" name="checkbox-mark" size="28" vueId="10cc7858-3"></u-icon>
+            <text class="data-v-8cdd6908">已关注</text>
+        </view>
+        <view class="{{['list','flex-rc','data-v-8cdd6908',follow?'':'follow']}}">
+            <view class="item flex-cc data-v-8cdd6908">
+                <view class="text data-v-8cdd6908">{{user.like_number}}</view>
+                <view class="label data-v-8cdd6908">点赞</view>
+            </view>
+            <view class="item flex-cc data-v-8cdd6908">
+                <view class="text data-v-8cdd6908">{{user.follow_number}}</view>
+                <view class="label data-v-8cdd6908">关注</view>
+            </view>
+            <view class="item flex-cc data-v-8cdd6908">
+                <view class="text data-v-8cdd6908">{{user.fans_number}}</view>
+                <view class="label data-v-8cdd6908">粉丝</view>
+            </view>
+        </view>
+    </view>
+    <view class="list flex-rsw data-v-8cdd6908" wx:if="{{releaseList.length>0}}">
+        <list-item bind:__l="__l" class="data-v-8cdd6908" item="{{item}}" join="{{false}}" type="{{type}}" user="{{user}}" vueId="{{'10cc7858-4-'+i}}" wx:for="{{releaseList}}" wx:for-index="i" wx:key="i"></list-item>
+    </view>
+    <view class="empty-box data-v-8cdd6908" style="{{swiperHeight}}" wx:else>
+        <u-empty bind:__l="__l" class="data-v-8cdd6908" mode="list" vueId="10cc7858-5"></u-empty>
+    </view>
+    <u-toast bind:__l="__l" class="data-v-8cdd6908 vue-ref" data-ref="uToast" vueId="10cc7858-6"></u-toast>
+</view>

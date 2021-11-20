@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "用户协议",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "usingComponents": {
+        "u-parse": "/uview-ui/components/u-parse/u-parse"
+    }
+}

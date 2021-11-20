@@ -1,0 +1,10 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+        "u-tabs-swiper": "/uview-ui/components/u-tabs-swiper/u-tabs-swiper",
+        "u-avatar": "/uview-ui/components/u-avatar/u-avatar",
+        "u-empty": "/uview-ui/components/u-empty/u-empty",
+        "u-toast": "/uview-ui/components/u-toast/u-toast"
+    }
+}

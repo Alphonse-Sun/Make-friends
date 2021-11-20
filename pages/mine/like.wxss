@@ -1,0 +1,11 @@
+.like.data-v-4822765a {
+    background-color: #f6f6f6;
+}
+
+.like .list.data-v-4822765a {
+    width: 100%;
+}
+
+.like .empty-box.data-v-4822765a {
+    height: 1000rpx;
+}

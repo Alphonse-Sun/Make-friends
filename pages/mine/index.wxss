@@ -1,0 +1,115 @@
+.mine {
+    padding-bottom: 260rpx;
+    background-color: #fff;
+}
+
+.mine .blank-block {
+    width: 100%;
+    height: 544rpx;
+    background: linear-gradient(180deg,rgba(120,240,184,.36),rgba(120,240,184,0));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mine .section-box {
+    width: 100%;
+    padding: 30rpx;
+}
+
+.mine .section-box .block .item {
+    width: 330rpx;
+    height: 156rpx;
+    border-radius: 16rpx;
+    padding: 32rpx;
+}
+
+.mine .section-box .block .item .label {
+    height: 40rpx;
+}
+
+.mine .section-box .block .item .label text {
+    height: 40rpx;
+    font-size: 32rpx;
+    font-weight: 700;
+    line-height: 40rpx;
+}
+
+.mine .section-box .block .item .intro {
+    height: 36rpx;
+    font-size: 28rpx;
+    line-height: 36rpx;
+    margin-top: 16rpx;
+}
+
+.mine .section-box .block .item.money {
+    background: #78f0b8;
+}
+
+.mine .section-box .block .item.money .label text {
+    color: #333;
+}
+
+.mine .section-box .block .item.money .intro {
+    color: rgba(51,51,51,.6);
+}
+
+.mine .section-box .block .item.team {
+    background: #6b7ff7;
+}
+
+.mine .section-box .block .item.team .label text {
+    color: #fff;
+}
+
+.mine .section-box .block .item.team .intro {
+    color: hsla(0,0%,100%,.6);
+}
+
+.mine .section-box .home-page {
+    width: 100%;
+    height: 104rpx;
+    background: #fbef4e;
+    border-radius: 16rpx;
+    padding: 28rpx;
+    margin-top: 30rpx;
+}
+
+.mine .section-box .home-page .label .icon {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.mine .section-box .home-page .label text {
+    height: 40rpx;
+    font-size: 32rpx;
+    color: #333;
+    line-height: 40rpx;
+    margin-left: 16rpx;
+}
+
+.mine .nav-list {
+    width: 100%;
+}
+
+.mine .nav-list .item {
+    height: 112rpx;
+    margin: 24rpx 30rpx 0;
+    padding: 32rpx 16rpx;
+}
+
+.mine .nav-list .item,.mine .nav-list .item::after {
+    border: none;
+    background: none;
+}
+
+.mine .nav-list .item .icon {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.mine .nav-list .item .text {
+    font-size: 32rpx;
+    color: #333;
+    margin-left: 20rpx;
+}

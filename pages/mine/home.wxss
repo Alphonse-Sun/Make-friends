@@ -1,0 +1,26 @@
+.home.data-v-8cdd6908 {
+    background-color: #fff;
+    position: relative;
+}
+
+.home .blank-block.data-v-8cdd6908 {
+    width: 100%;
+    height: 576rpx;
+    background: linear-gradient(180deg,rgba(120,240,184,.16),rgba(120,240,184,0));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home .blank-block.follow.data-v-8cdd6908 {
+    height: 672rpx;
+}
+
+.home .user-info.data-v-8cdd6908 {
+    padding: 32rpx 30rpx 0;
+}
+
+.home .list.data-v-8cdd6908 {
+    width: 100%;
+    padding: 32rpx 30rpx 80rpx;
+}

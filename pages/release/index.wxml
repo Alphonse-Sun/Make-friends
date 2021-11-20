@@ -1,0 +1,94 @@
+<view class="container data-v-21175402">
+    <view class="title data-v-21175402">
+        <view class="title-flex data-v-21175402">
+            <view class="data-v-21175402">秘密标题</view>
+            <view class="title-input data-v-21175402">
+                <u-input bind:__l="__l" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','title','$event',[] ],['info'] ] ] ] ]}}" placeholder="请填写秘密 (好的标题更能吸引人)" type="textarea" value="{{info.title}}" vueId="6b612905-1"></u-input>
+            </view>
+        </view>
+        <view bindtap="__e" class="cover-img data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+            <u-image bind:__l="__l" borderRadius="12" class="data-v-21175402" height="288" src="{{info.background_image}}" vueId="6b612905-2" width="208"></u-image>
+            <view class="change-img data-v-21175402">换一张封面</view>
+        </view>
+    </view>
+    <view class="select-secret data-v-21175402">
+        <view bindtap="__e" class="select-classify data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}">
+            <view class="data-v-21175402">{{$root.m0}}</view>
+            <u-icon bind:__l="__l" class="data-v-21175402" name="arrow-right" size="24" vueId="6b612905-3"></u-icon>
+        </view>
+        <view bindtap="__e" class="select-tag data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'changeTag',['$event'] ] ] ] ]}}">
+            <view class="data-v-21175402" wx:if="{{info.secret_category_id==''}}">点击选择秘密标签</view>
+            <u-input bind:__l="__l" bind:focus="__e" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^focus',[ ['addTags'] ] ],[ '^input',[ [ '__set_model',[ '$0','secret_category_tags','$event',[] ],['info'] ] ] ] ]}}" type="textarea" value="{{info.secret_category_tags}}" vueId="6b612905-4" wx:else></u-input>
+        </view>
+        <view bindtap="__e" class="tags data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'changeTag',['$event'] ] ] ] ]}}">#标签</view>
+    </view>
+    <view class="address data-v-21175402">
+        <view bindtap="__e" class="address-icon data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'sameCity',[1] ] ] ] ]}}" wx:if="{{info.is_same_city==0}}">
+            <u-image bind:__l="__l" class="data-v-21175402" height="40" src="/static/index/map.png" vueId="6b612905-5" width="40"></u-image>
+            <view class="data-v-21175402">地理位置</view>
+        </view>
+        <view bindtap="__e" class="address-icons data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'sameCity',[0] ] ] ] ]}}" wx:else>
+            <u-image bind:__l="__l" class="data-v-21175402" height="40" src="/static/index/address.png" vueId="6b612905-6" width="40"></u-image>
+            <text class="data-v-21175402">{{info.city}}</text>
+        </view>
+        <view class="address-input data-v-21175402">
+            <view class="data-v-21175402" style="height:300rpx;overflow:auto;">
+                <u-input bind:__l="__l" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','content','$event',[] ],['info'] ] ] ] ]}}" maxlength="1000" placeholder="请填写自己的秘密 (需要认真对待哦)" type="textarea" value="{{info.content}}" vueId="6b612905-7"></u-input>
+            </view>
+            <view class="pre-box data-v-21175402" wx:if="{{!showUploadList}}">
+                <view class="pre-item data-v-21175402" wx:for="{{info.image}}" wx:key="index">
+                    <image class="pre-item-image data-v-21175402" mode="aspectFill" src="{{item.url}}"></image>
+                </view>
+            </view>
+            <u-upload action="{{action}}" bind:__l="__l" bind:onRemove="__e" bind:onSuccess="__e" class="data-v-21175402" customBtn="{{true}}" data-event-opts="{{[ [ '^onSuccess',[ ['upImg'] ] ],[ '^onRemove',[ ['delImg'] ] ] ]}}" height="136" showUploadList="{{showUploadList}}" vueId="6b612905-8" vueSlots="{{['addBtn']}}" width="136">
+                <view bindtap="__e" class="slot-btn data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'beforeUpload',['$event'] ] ] ] ]}}" hoverClass="slot-btn__hover" hoverStayTime="150" slot="addBtn">
+                    <u-icon bind:__l="__l" class="data-v-21175402" color="{{$u.color['lightColor']}}" name="/static/index/upload.png" size="136" vueId="{{'6b612905-9'+','+'6b612905-8'}}"></u-icon>
+                </view>
+            </u-upload>
+        </view>
+        <view class="wechat-num data-v-21175402" wx:if="{{config.secret_contact_switch==1}}">
+            <view class="flex-space data-v-21175402">
+                <view bindtap="__e" class="wechat-flex data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'e2',['$event'] ] ] ] ]}}">
+                    <view class="data-v-21175402">{{numDefault}}</view>
+                    <u-icon bind:__l="__l" class="data-v-21175402" color="#333333" name="arrow-right" size="20" vueId="6b612905-10"></u-icon>
+                    <view class="icon-border data-v-21175402"></view>
+                </view>
+                <u-input bind:__l="__l" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','weixin','$event',[] ],['info'] ] ] ] ]}}" placeholder="只有交换彼此能看到" value="{{info.weixin}}" vueId="6b612905-11" wx:if="{{numDefault=='微信号'}}"></u-input>
+                <u-input bind:__l="__l" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','phone','$event',[] ],['info'] ] ] ] ]}}" placeholder="只有交换彼此能看到" value="{{info.phone}}" vueId="6b612905-12" wx:else></u-input>
+            </view>
+            <view bindtap="__e" class="record data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'openRecord',['$event'] ] ] ] ]}}">填写纪录</view>
+        </view>
+    </view>
+    <view class="rules_box data-v-21175402">
+        <u-checkbox-group activeColor="#6B7FF7" bind:__l="__l" class="rules_btn data-v-21175402" size="28" vueId="6b612905-13" vueSlots="{{['default']}}">
+            <u-checkbox bind:__l="__l" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','pitch','$event',[] ] ] ] ] ]}}" shape="square" value="{{pitch}}" vueId="{{'6b612905-14'+','+'6b612905-13'}}"></u-checkbox>
+        </u-checkbox-group>
+        <view class="rules_title data-v-21175402">我已阅读</view>
+        <navigator class="rules_goto data-v-21175402" hoverClass="none" url="/pages/index/explain">《用户协议》</navigator>
+    </view>
+    <view bindtap="__e" class="submit-bottom data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" wx:if="{{config.payment_switch==1}}">{{'支付 '+config.secret_wirte_pay_money+'元 发布秘密'}}</view>
+    <view bindtap="__e" class="submit-bottom data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" wx:else>发布秘密</view>
+    <u-popup bind:__l="__l" bind:input="__e" borderRadius="32" class="data-v-21175402" closeable="{{true}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','imgShow','$event',[] ] ] ] ] ]}}" height="888" mode="bottom" value="{{imgShow}}" vueId="6b612905-15" vueSlots="{{['default']}}">
+        <view class="front data-v-21175402">选择封面</view>
+        <swiper bindchange="__e" class="swiper data-v-21175402" current="{{swiperCurrent}}" data-event-opts="{{[ [ 'change',[ [ 'changeSwiper',['$event'] ] ] ] ]}}" duration="{{1000}}" interval="{{3000}}" nextMargin="155rpx" previousMargin="{{swiperCurrent>=0?'185rpx':'0'}}">
+            <swiper-item class="{{['data-v-21175402',index==swiperCurrent?'active':'active none']}}" wx:for="{{list}}" wx:key="index">
+                <view class="activy data-v-21175402">
+                    <image class="swiper-item data-v-21175402" src="{{item}}"></image>
+                </view>
+            </swiper-item>
+        </swiper>
+        <view bindtap="__e" class="use-front data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'selectIndex',['$event'] ] ] ] ]}}">使用封面</view>
+    </u-popup>
+    <u-popup bind:__l="__l" bind:input="__e" borderRadius="32" class="data-v-21175402" closeable="{{true}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','tagShow','$event',[] ] ] ] ] ]}}" height="788" mode="bottom" value="{{tagShow}}" vueId="6b612905-16" vueSlots="{{['default']}}">
+        <view class="fronts data-v-21175402">选择标签</view>
+        <view class="tags-list data-v-21175402">
+            <scroll-view class="data-v-21175402" scrollY="true">
+                <view bindtap="__e" class="tagsName data-v-21175402" data-event-opts="{{[ [ 'tap',[ [ 'selectTag',[index] ] ] ] ]}}" wx:for="{{tagList}}" wx:key="index">{{'#'+item.tag}}</view>
+            </scroll-view>
+        </view>
+    </u-popup>
+    <u-action-sheet bind:__l="__l" bind:click="__e" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^click',[ ['changeNum'] ] ],[ '^input',[ [ '__set_model',[ '','numShow','$event',[] ] ] ] ] ]}}" list="{{numList}}" value="{{numShow}}" vueId="6b612905-17"></u-action-sheet>
+    <u-select bind:__l="__l" bind:confirm="__e" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^confirm',[ ['selectNum'] ] ],[ '^input',[ [ '__set_model',[ '','recordShow','$event',[] ] ] ] ] ]}}" list="{{recordList}}" safeAreaInsetBottom="{{true}}" value="{{recordShow}}" vueId="6b612905-18"></u-select>
+    <u-select bind:__l="__l" bind:confirm="__e" bind:input="__e" class="data-v-21175402" data-event-opts="{{[ [ '^confirm',[ ['confirm'] ] ],[ '^input',[ [ '__set_model',[ '','classifyShow','$event',[] ] ] ] ] ]}}" labelName="name" list="{{classifyList}}" value="{{classifyShow}}" valueName="secret_category_id" vueId="6b612905-19"></u-select>
+    <custom-tabbar bind:__l="__l" class="data-v-21175402" current="{{1}}" vueId="6b612905-20"></custom-tabbar>
+</view>

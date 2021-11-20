@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="content">
+        <secert-detail bind:__l="__l" bind:infoDeatil="__e" data="{{info.secret}}" data-event-opts="{{[ [ '^infoDeatil',[ ['infoDeatil'] ] ] ]}}" vueId="49115082-1"></secert-detail>
+    </view>
+    <view class="mySecret" wx:if="{{info.secret_swap}}">
+        <view class="title">我的秘密</view>
+        <view class="intro">{{info.secret_swap.content}}</view>
+        <view class="secret-pic">
+            <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'previewImg',[index] ] ] ] ]}}" src="{{item}}" wx:for="{{info.secret_swap.images}}" wx:key="index"></image>
+        </view>
+        <view class="wechat-num" wx:if="{{info.secret_swap.weixin!=''}}">{{'微信号: '+info.secret_swap.weixin}}</view>
+        <view class="wechat-num" wx:if="{{info.secret_swap.phone!=''}}">{{'手机号: '+info.secret_swap.phone}}</view>
+        <view class="change-time">{{'交换时间: '+info.secret_swap.create_time}}</view>
+    </view>
+</view>

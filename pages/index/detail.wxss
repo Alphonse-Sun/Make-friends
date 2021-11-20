@@ -1,0 +1,69 @@
+.container {
+    background-color: #f6f6f6;
+    padding: 36rpx 30rpx;
+    height: 100vh;
+}
+
+.container .content {
+    width: 690rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 32rpx;
+}
+
+.container .secret-pic {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .secret-pic image {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 12rpx;
+    margin-right: 18rpx;
+    margin-bottom: 20rpx;
+}
+
+.container .secret-pic image:nth-child(4n) {
+    margin-right: 0;
+}
+
+.container .mySecret {
+    margin-top: 32rpx;
+    width: 690rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 32rpx 32rpx 24rpx;
+}
+
+.container .mySecret .title {
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    color: #333;
+    border-bottom: 2rpx solid #dedede;
+    padding-bottom: 20rpx;
+    margin-bottom: 30rpx;
+}
+
+.container .mySecret .intro {
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #666;
+    margin-bottom: 32rpx;
+}
+
+.container .mySecret .wechat-num {
+    margin-top: 12rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #333;
+    padding-bottom: 32rpx;
+    border-bottom: 2rpx solid #dedede;
+    margin-bottom: 22rpx;
+}
+
+.container .mySecret .change-time {
+    font-size: 28rpx;
+    font-family: HarmonyOS_Sans_SC;
+    color: #666;
+}

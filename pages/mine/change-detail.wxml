@@ -1,0 +1,5 @@
+<view class="container">
+    <view class="content" wx:if="{{info}}">
+        <secert-detail bind:__l="__l" data="{{info}}" type="{{2}}" vueId="c072424a-1"></secert-detail>
+    </view>
+</view>

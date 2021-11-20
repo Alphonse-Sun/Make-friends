@@ -1,0 +1,34 @@
+<view class="container">
+    <view class="title">请选择你的性别</view>
+    <view class="subtitle">我们会更精确的为你提供合适的秘密</view>
+    <view class="change-gender">
+        <block wx:if="{{sex==0||sex==2}}">
+            <view bindtap="__e" class="img-border" data-event-opts="{{[ [ 'tap',[ [ 'change',[1] ] ] ] ]}}">
+                <image class="gender-img" src="/static/login/boy.png"></image>
+            </view>
+            <view class="gender-name">男生</view>
+        </block>
+        <block wx:if="{{sex==1}}">
+            <view class="img-border">
+                <image class="gender-img" src="/static/login/boy-active.png"></image>
+                <image class="select-icon" src="/static/login/selected.png"></image>
+            </view>
+            <view class="gender-names">男生</view>
+        </block>
+        <image class="gender-border" src="/static/login/img-border.png"></image>
+        <block wx:if="{{sex==0||sex==1}}">
+            <view bindtap="__e" class="img-border" data-event-opts="{{[ [ 'tap',[ [ 'change',[2] ] ] ] ]}}" style="margin-top:46rpx;">
+                <image class="gender-img" src="/static/login/girl.png"></image>
+            </view>
+            <view class="gender-name">女生</view>
+        </block>
+        <block wx:if="{{sex==2}}">
+            <view class="img-border" style="margin-top:46rpx;">
+                <image class="gender-img" src="/static/login/girl-active.png"></image>
+                <image class="select-icon" src="/static/login/selected.png"></image>
+            </view>
+            <view class="gender-names">女生</view>
+        </block>
+    </view>
+    <view bindtap="__e" class="{{[sex==0?'open':'sign open']}}" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}">保存</view>
+</view>

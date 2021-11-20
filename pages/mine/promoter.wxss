@@ -1,0 +1,22 @@
+.promoter.data-v-16f66050 {
+    min-height: 100vh;
+    padding: 48rpx 30rpx 58rpx;
+    background-color: #fff;
+}
+
+.promoter .content-box.data-v-16f66050 {
+    padding-bottom: 206rpx;
+}
+
+.promoter .button.data-v-16f66050 {
+    width: 690rpx;
+    line-height: 96rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    background: #6b7ff7;
+    border-radius: 16rpx;
+    position: fixed;
+    bottom: 110rpx;
+    left: 30rpx;
+}

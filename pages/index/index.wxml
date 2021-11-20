@@ -1,0 +1,141 @@
+<view class="index data-v-6cad7562">
+    <view class="top-title data-v-6cad7562" style="{{classifyShow?'background:#D4D4D9;padding-top:'+paddingTopNum+'px':'padding-top:'+paddingTopNum+'px'}}">
+        <view class="data-v-6cad7562" style="position:relative;" wx:for="{{topImg}}" wx:key="index">
+            <view bindtap="__e" class="{{['data-v-6cad7562',select==index?'classify-name active':'classify-name']}}" data-event-opts="{{[ [ 'tap',[ [ 'changeImg',[index] ] ] ] ]}}">{{item.name}}</view>
+            <view class="actice-border data-v-6cad7562" wx:if="{{select==index}}"></view>
+        </view>
+    </view>
+    <view bindtap="__e" class="getUser data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'getUserProfile',['$event'] ] ] ] ]}}" wx:if="{{userInfo.nickName==''}}"></view>
+    <swiper bindchange="__e" class="data-v-6cad7562" current="{{swiperCurrent}}" data-event-opts="{{[ [ 'change',[ [ 'changeLength',['$event'] ] ] ] ]}}" vertical="{{true}}">
+        <swiper-item class="data-v-6cad7562" wx:for="{{list}}" wx:key="index">
+            <view class="page-index data-v-6cad7562" style="{{'background-image:url('+item.background_image+')'}}">
+                <view class="back data-v-6cad7562"></view>
+                <view class="content data-v-6cad7562">
+                    <view class="data-v-6cad7562" style="display:flex;">
+                        <view class="city data-v-6cad7562" wx:if="{{item.is_same_city}}">
+                            <u-image bind:__l="__l" class="data-v-6cad7562" height="40" src="/static/index/address.png" vueId="{{'8dd740cc-1-'+index}}" width="40"></u-image>
+                            <view class="data-v-6cad7562">同城</view>
+                        </view>
+                        <block wx:if="{{item.user.gender!=0}}">
+                            <image class="gender data-v-6cad7562" src="/static/index/girl.png" wx:if="{{item.user.gender==2}}"></image>
+                            <image class="gender data-v-6cad7562" src="/static/index/boy.png" wx:if="{{item.user.gender==1}}"></image>
+                        </block>
+                    </view>
+                    <view class="label data-v-6cad7562">
+                        <text class="data-v-6cad7562" wx:for="{{item.tags}}" wx:for-index="k" wx:for-item="v" wx:key="k">{{'#'+v}}</text>
+                    </view>
+                    <view class="subTitle data-v-6cad7562">{{item.title}}</view>
+                    <view class="data-v-6cad7562" wx:if="{{item.is_swap==0}}">
+                        <view class="secret data-v-6cad7562">
+                            <view class="data-v-6cad7562" style="display:flex;align-items:center;">
+                                <u-image bind:__l="__l" class="data-v-6cad7562" height="40" src="/static/index/secret.png" vueId="{{'8dd740cc-2-'+index}}" width="40"></u-image>
+                                <view class="secret-child data-v-6cad7562">{{config.secret_home_hide}}</view>
+                            </view>
+                        </view>
+                        <view bindtap="__e" class="answer data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'writeSercet',['$0',index],[ [ ['list','',index,'secret_id'] ] ] ] ] ] ]}}">
+                            <u-image bind:__l="__l" class="data-v-6cad7562" height="40" src="/static/index/write.png" vueId="{{'8dd740cc-3-'+index}}" width="40"></u-image>
+                            <view class="answer-child data-v-6cad7562">{{config.secret_home_input}}</view>
+                        </view>
+                    </view>
+                    <view class="data-v-6cad7562" wx:else>
+                        <view class="secret data-v-6cad7562">
+                            <view class="data-v-6cad7562" style="display:flex;align-items:center;">
+                                <u-image bind:__l="__l" class="data-v-6cad7562" height="40" src="/static/index/secret.png" vueId="{{'8dd740cc-4-'+index}}" width="40"></u-image>
+                                <view class="secret-child data-v-6cad7562">{{config.secret_home_hide}}</view>
+                            </view>
+                            <view bindtap="__e" class="look-up data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'viewDetail',['$0'],[ [ ['list','',index,'secret_id'] ] ] ] ] ] ]}}">查看</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="user-head data-v-6cad7562">
+                    <view class="top data-v-6cad7562">
+                        <image bindtap="__e" class="user-pic data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'homeIndex',['$0'],[ [ ['list','',index,'user_id'] ] ] ] ] ] ]}}" src="{{item.user.avatarUrl}}"></image>
+                        <image bindtap="__e" class="user-icon data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'unfollow',['$0',index],[ [ ['list','',index,'user_id'] ] ] ] ] ] ]}}" src="/static/index/follow-active.png" wx:if="{{item.user.is_follow}}"></image>
+                        <image bindtap="__e" class="user-icon data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'follow',['$0',index],[ [ ['list','',index,'user_id'] ] ] ] ] ] ]}}" src="/static/index/follow.png" wx:else></image>
+                    </view>
+                    <view bindtap="__e" class="user-child data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'like',['$0',index],[ [ ['list','',index,'secret_id'] ] ] ] ] ] ]}}">
+                        <u-image bind:__l="__l" class="data-v-6cad7562" height="64" src="/static/index/collect-active.png" vueId="{{'8dd740cc-5-'+index}}" width="68" wx:if="{{item.is_like}}"></u-image>
+                        <u-image bind:__l="__l" class="data-v-6cad7562" height="64" src="/static/index/collect.png" vueId="{{'8dd740cc-6-'+index}}" width="68" wx:else></u-image>
+                        <view class="data-v-6cad7562">{{item.like_number}}</view>
+                    </view>
+                    <view bindtap="__e" class="user-child data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'posterShare',[index] ] ] ] ]}}">
+                        <u-image bind:__l="__l" class="data-v-6cad7562" height="64" src="/static/index/share.png" vueId="{{'8dd740cc-7-'+index}}" width="72"></u-image>
+                        <view class="data-v-6cad7562">{{item.share_number}}</view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <u-popup bind:__l="__l" bind:input="__e" borderRadius="32" class="data-v-6cad7562" closeable="{{true}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','secretShow','$event',[] ] ] ] ] ]}}" height="878" mode="bottom" value="{{secretShow}}" vueId="8dd740cc-8" vueSlots="{{['default']}}">
+        <view class="secret-title data-v-6cad7562">填写秘密</view>
+        <view class="secret-content data-v-6cad7562">
+            <scroll-view class="data-v-6cad7562" scrollY="true">
+                <view class="data-v-6cad7562" style="overflow:auto;height:220rpx;">
+                    <u-input bind:__l="__l" bind:input="__e" class="data-v-6cad7562" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','content','$event',[] ] ] ] ] ]}}" maxlength="1000" placeholder="请填写自己的秘密 (需要认真对待哦)" type="textarea" value="{{content}}" vueId="{{'8dd740cc-9'+','+'8dd740cc-8'}}"></u-input>
+                </view>
+                <view class="pre-box data-v-6cad7562" wx:if="{{!showUploadList}}">
+                    <view class="pre-item data-v-6cad7562" wx:for="{{lists}}" wx:key="index">
+                        <image class="pre-item-image data-v-6cad7562" mode="aspectFill" src="{{item.url}}"></image>
+                    </view>
+                </view>
+                <u-upload action="{{action}}" bind:__l="__l" bind:onRemove="__e" bind:onSuccess="__e" class="data-v-6cad7562" customBtn="{{true}}" data-event-opts="{{[ [ '^onSuccess',[ ['upImg'] ] ],[ '^onRemove',[ ['delImg'] ] ] ]}}" height="136" showUploadList="{{showUploadList}}" vueId="{{'8dd740cc-10'+','+'8dd740cc-8'}}" vueSlots="{{['addBtn']}}" width="136">
+                    <view bindtap="__e" class="slot-btn data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'beforeUpload',['$event'] ] ] ] ]}}" hoverClass="slot-btn__hover" hoverStayTime="150" slot="addBtn">
+                        <u-icon bind:__l="__l" class="data-v-6cad7562" color="{{$u.color['lightColor']}}" name="/static/index/upload.png" size="136" vueId="{{'8dd740cc-11'+','+'8dd740cc-10'}}"></u-icon>
+                    </view>
+                </u-upload>
+            </scroll-view>
+            <view class="wechat-num data-v-6cad7562" wx:if="{{config.secret_contact_switch==1}}">
+                <view class="flex-space data-v-6cad7562">
+                    <view bindtap="__e" class="wechat-flex data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+                        <view class="data-v-6cad7562">{{numDefault}}</view>
+                        <u-icon bind:__l="__l" class="data-v-6cad7562" color="#333333" name="arrow-right" size="20" vueId="{{'8dd740cc-12'+','+'8dd740cc-8'}}"></u-icon>
+                        <view class="icon-border data-v-6cad7562"></view>
+                    </view>
+                    <u-input bind:__l="__l" bind:input="__e" class="data-v-6cad7562" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','weixin','$event',[] ] ] ] ] ]}}" placeholder="只有交换彼此能看到" value="{{weixin}}" vueId="{{'8dd740cc-13'+','+'8dd740cc-8'}}" wx:if="{{numDefault=='微信号'}}"></u-input>
+                    <u-input bind:__l="__l" bind:input="__e" class="data-v-6cad7562" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','phone','$event',[] ] ] ] ] ]}}" placeholder="只有交换彼此能看到" value="{{phone}}" vueId="{{'8dd740cc-14'+','+'8dd740cc-8'}}" wx:else></u-input>
+                </view>
+                <view bindtap="__e" class="record data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'openRecord',['$event'] ] ] ] ]}}">填写纪录</view>
+            </view>
+            <view class="rules_box data-v-6cad7562">
+                <u-checkbox-group activeColor="#6B7FF7" bind:__l="__l" class="rules_btn data-v-6cad7562" size="28" vueId="{{'8dd740cc-15'+','+'8dd740cc-8'}}" vueSlots="{{['default']}}">
+                    <u-checkbox bind:__l="__l" bind:input="__e" class="data-v-6cad7562" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','pitch','$event',[] ] ] ] ] ]}}" shape="square" value="{{pitch}}" vueId="{{'8dd740cc-16'+','+'8dd740cc-15'}}"></u-checkbox>
+                </u-checkbox-group>
+                <view class="rules_title data-v-6cad7562">我已阅读</view>
+                <navigator class="rules_goto data-v-6cad7562" hoverClass="none" url="/pages/index/explain">《用户协议》</navigator>
+            </view>
+        </view>
+        <view bindtap="__e" class="secret-submit data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" wx:if="{{config.payment_switch==1}}">{{'支付 '+config.secret_swap_pay_money+'元 进行交换'}}</view>
+        <view bindtap="__e" class="secret-submit data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" wx:else>交换秘密</view>
+    </u-popup>
+    <view bindtap="__e" class="classify-back data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}" wx:if="{{classifyShow}}"></view>
+    <view class="classify-List data-v-6cad7562" style="{{'top:'+pageTopHeight+'px'}}" wx:if="{{classifyShow}}">
+        <view bindtap="__e" class="classify-child data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'changeName',[index] ] ] ] ]}}" wx:for="{{classifyList}}" wx:key="index">
+            <u-image bind:__l="__l" class="data-v-6cad7562" height="40" src="/static/index/start.png" vueId="{{'8dd740cc-17-'+index}}" width="40"></u-image>
+            <view class="data-v-6cad7562">{{item.name}}</view>
+        </view>
+    </view>
+    <view bindtap="__e" class="posterBack data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'e2',['$event'] ] ] ] ]}}" wx:if="{{posterShow}}"></view>
+    <view class="posterBacks data-v-6cad7562" wx:if="{{posterShow}}">
+        <view class="shareImg1 data-v-6cad7562">
+            <image class="data-v-6cad7562" src="{{imgSrc}}" style="{{'width:'+w+'rpx;height:'+h+'rpx;margin:auto;margin-top:160rpx'}}" wx:if="{{imgSrc!=''}}"></image>
+            <canvas canvasId="shareImg" class="data-v-6cad7562" hidden="{{!(imgSrc=='')}}" style="{{'width:'+w+'rpx;height:'+h+'rpx;margin:auto;margin-top:160rpx'}}"></canvas>
+        </view>
+        <view class="maksbox data-v-6cad7562"></view>
+        <view class="canvas_nav data-v-6cad7562">
+            <view class="canvas_nav_top data-v-6cad7562">
+                <button class="canvas-child data-v-6cad7562" openType="share" plain="true">
+                    <u-image bind:__l="__l" class="data-v-6cad7562" height="104" src="/static/index/weath-icon.png" vueId="8dd740cc-18" width="104"></u-image>
+                    <view class="data-v-6cad7562">分享好友</view>
+                </button>
+                <view bindtap="__e" class="canvas-child data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'SaveCard',['$event'] ] ] ] ]}}">
+                    <u-image bind:__l="__l" class="data-v-6cad7562" height="104" src="/static/index/download-icon.png" vueId="8dd740cc-19" width="104"></u-image>
+                    <view class="data-v-6cad7562">保存分享图</view>
+                </view>
+            </view>
+            <view bindtap="__e" class="canvas_nav-bottom data-v-6cad7562" data-event-opts="{{[ [ 'tap',[ [ 'e3',['$event'] ] ] ] ]}}">取消</view>
+        </view>
+    </view>
+    <u-select bind:__l="__l" bind:confirm="__e" bind:input="__e" class="data-v-6cad7562" data-event-opts="{{[ [ '^confirm',[ ['selectNum'] ] ],[ '^input',[ [ '__set_model',[ '','recordShow','$event',[] ] ] ] ] ]}}" list="{{recordList}}" safeAreaInsetBottom="{{true}}" value="{{recordShow}}" vueId="8dd740cc-20"></u-select>
+    <u-action-sheet bind:__l="__l" bind:click="__e" bind:input="__e" class="data-v-6cad7562" data-event-opts="{{[ [ '^click',[ ['changeNum'] ] ],[ '^input',[ [ '__set_model',[ '','numShow','$event',[] ] ] ] ] ]}}" list="{{numList}}" value="{{numShow}}" vueId="8dd740cc-21"></u-action-sheet>
+    <custom-tabbar bind:__l="__l" class="data-v-6cad7562" current="{{0}}" vueId="8dd740cc-22"></custom-tabbar>
+</view>

@@ -1,0 +1,9 @@
+<view class="page like data-v-4822765a">
+    <view class="list flex-rsw data-v-4822765a" wx:if="{{likeList.length>0}}">
+        <list-item bind:__l="__l" class="data-v-4822765a" item="{{item}}" join="{{false}}" type="{{false}}" vueId="{{'6f97fc1c-1-'+i}}" wx:for="{{likeList}}" wx:for-index="i" wx:key="i"></list-item>
+    </view>
+    <view class="empty-box data-v-4822765a" wx:else>
+        <u-empty bind:__l="__l" class="data-v-4822765a" mode="list" vueId="6f97fc1c-2"></u-empty>
+    </view>
+    <u-toast bind:__l="__l" class="data-v-4822765a vue-ref" data-ref="uToast" vueId="6f97fc1c-3"></u-toast>
+</view>

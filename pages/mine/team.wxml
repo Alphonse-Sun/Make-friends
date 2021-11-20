@@ -1,0 +1,52 @@
+<view class="team data-v-d1fc81d0">
+    <u-navbar backIconColor="#101010" background="{{background}}" bind:__l="__l" borderBottom="{{false}}" class="data-v-d1fc81d0" customBack="{{handleBack}}" title="我的团队" titleColor="#101010" vueId="6edf3516-1"></u-navbar>
+    <view class="tabs-box data-v-d1fc81d0">
+        <u-tabs-swiper activeColor="#101010" barHeight="4" barWidth="330" bind:__l="__l" bind:change="__e" class="data-v-d1fc81d0 vue-ref" current="{{current}}" data-event-opts="{{[ [ '^change',[ ['tabsChange'] ] ] ]}}" data-ref="uTabs" fontSize="32" height="96" inactiveColor="#999999" isScroll="{{false}}" list="{{tabs}}" vueId="6edf3516-2"></u-tabs-swiper>
+    </view>
+    <swiper bindanimationfinish="__e" bindtransition="__e" class="swiper-box data-v-d1fc81d0" current="{{swiperCurrent}}" data-event-opts="{{[ [ 'transition',[ [ 'transition',['$event'] ] ] ],[ 'animationfinish',[ [ 'animationfinish',['$event'] ] ] ] ]}}" style="{{swiperHeight}}">
+        <swiper-item class="swiper-item data-v-d1fc81d0">
+            <scroll-view bindscrolltolower="__e" class="data-v-d1fc81d0" data-event-opts="{{[ [ 'scrolltolower',[ [ 'onreachBottom',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="{{swiperHeight}}">
+                <view class="list data-v-d1fc81d0" wx:if="{{firstList.length>0}}">
+                    <view class="item flex-rsc data-v-d1fc81d0" wx:for="{{firstList}}" wx:for-index="i" wx:key="i">
+                        <view class="user flex-rc data-v-d1fc81d0">
+                            <u-avatar bind:__l="__l" class="data-v-d1fc81d0" size="96" src="{{item.avatarUrl}}" vueId="{{'6edf3516-3-'+i}}"></u-avatar>
+                            <view class="info-box data-v-d1fc81d0">
+                                <view class="name bold data-v-d1fc81d0">{{item.nickName}}</view>
+                                <view class="tips flex-rc data-v-d1fc81d0">
+                                    <image class="icon data-v-d1fc81d0" src="../../static/mine/icon-payment.png"></image>
+                                    <text class="data-v-d1fc81d0">{{'累计消费: '+item.total_payment+'元'}}</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view bindtap="__e" class="button data-v-d1fc81d0" data-event-opts="{{[ [ 'tap',[ [ 'viewDetail',['$0'],[ [ ['firstList','',i,'user_id'] ] ] ] ] ] ]}}">查看</view>
+                    </view>
+                </view>
+                <view class="empty-box data-v-d1fc81d0" style="{{swiperHeight}}" wx:else>
+                    <u-empty bind:__l="__l" class="data-v-d1fc81d0" mode="list" vueId="6edf3516-4"></u-empty>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item class="swiper-item data-v-d1fc81d0">
+            <scroll-view bindscrolltolower="__e" class="data-v-d1fc81d0" data-event-opts="{{[ [ 'scrolltolower',[ [ 'onreachBottom',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="{{swiperHeight}}">
+                <view class="list data-v-d1fc81d0" wx:if="{{secondList.length>0}}">
+                    <view class="item flex-rsc data-v-d1fc81d0" wx:for="{{secondList}}" wx:for-index="i" wx:key="i">
+                        <view class="user flex-rc data-v-d1fc81d0">
+                            <u-avatar bind:__l="__l" class="data-v-d1fc81d0" size="96" src="{{item.avatarUrl}}" vueId="{{'6edf3516-5-'+i}}"></u-avatar>
+                            <view class="info-box data-v-d1fc81d0">
+                                <view class="name bold data-v-d1fc81d0">{{item.nickName}}</view>
+                                <view class="tips flex-rc data-v-d1fc81d0">
+                                    <image class="icon data-v-d1fc81d0" src="../../static/mine/icon-payment.png"></image>
+                                    <text class="data-v-d1fc81d0">{{'累计消费: '+item.total_payment+'元'}}</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view bindtap="__e" class="button data-v-d1fc81d0" data-event-opts="{{[ [ 'tap',[ [ 'viewDetail',['$0'],[ [ ['secondList','',i,'user_id'] ] ] ] ] ] ]}}">查看</view>
+                    </view>
+                </view>
+                <view class="empty-box data-v-d1fc81d0" style="{{swiperHeight}}" wx:else>
+                    <u-empty bind:__l="__l" class="data-v-d1fc81d0" mode="list" vueId="6edf3516-6"></u-empty>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

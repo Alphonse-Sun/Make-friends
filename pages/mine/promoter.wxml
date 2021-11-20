@@ -1,0 +1,8 @@
+<view class="promoter data-v-16f66050">
+    <u-navbar backIconColor="#101010" background="{{background}}" bind:__l="__l" class="data-v-16f66050" customBack="{{handleBack}}" title="成为推广员" titleColor="#101010" vueId="27ea8161-1"></u-navbar>
+    <view class="content-box data-v-16f66050">
+        <u-parse bind:__l="__l" class="data-v-16f66050" html="{{detail.promoter_explain}}" tagStyle="{{tagStyle}}" vueId="27ea8161-2"></u-parse>
+    </view>
+    <view bindtap="__e" class="button bold data-v-16f66050" data-event-opts="{{[ [ 'tap',[ ['wechatPay'] ] ] ]}}">{{(detail.promoter_pay_money||'--')+'元 成为推广员'}}</view>
+    <u-toast bind:__l="__l" class="data-v-16f66050 vue-ref" data-ref="uToast" vueId="27ea8161-3"></u-toast>
+</view>

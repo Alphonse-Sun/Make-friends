@@ -1,0 +1,3 @@
+<view class="container">
+    <u-parse bind:__l="__l" html="{{config.secret_agreement}}" vueId="7d42c9d6-1"></u-parse>
+</view>

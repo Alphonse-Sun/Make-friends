@@ -1,0 +1,59 @@
+.team.data-v-d1fc81d0 {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.team .tabs-box.data-v-d1fc81d0 {
+    border-bottom: 4rpx solid #f6f6f6;
+}
+
+.team .list.data-v-d1fc81d0 {
+    padding: 40rpx 30rpx;
+}
+
+.team .list .item.data-v-d1fc81d0 {
+    height: 96rpx;
+    margin-bottom: 40rpx;
+}
+
+.team .list .item.data-v-d1fc81d0:last-child {
+    margin-bottom: 0;
+}
+
+.team .list .item .name.data-v-d1fc81d0 {
+    height: 40rpx;
+    font-size: 32rpx;
+    color: #333;
+    line-height: 40rpx;
+}
+
+.team .list .item .info-box.data-v-d1fc81d0 {
+    margin-left: 20rpx;
+}
+
+.team .list .item .info-box .tips.data-v-d1fc81d0 {
+    margin-top: 10rpx;
+}
+
+.team .list .item .info-box .tips .icon.data-v-d1fc81d0 {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.team .list .item .info-box .tips text.data-v-d1fc81d0 {
+    height: 32rpx;
+    font-size: 24rpx;
+    color: #fc9d6d;
+    line-height: 32rpx;
+    margin-left: 10rpx;
+}
+
+.team .list .item .button.data-v-d1fc81d0 {
+    width: 136rpx;
+    line-height: 56rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #333;
+    border-radius: 8rpx;
+    border: 1rpx solid rgba(51,51,51,.8);
+}

@@ -1,0 +1,29 @@
+<view class="swap data-v-44baa2f1">
+    <u-navbar backIconColor="#101010" background="{{background}}" bind:__l="__l" borderBottom="{{false}}" class="data-v-44baa2f1" customBack="{{handleBack}}" title="我的交换" titleColor="#101010" vueId="2d8e77a0-1"></u-navbar>
+    <view class="tabs-box data-v-44baa2f1">
+        <u-tabs-swiper activeColor="#101010" barHeight="4" barWidth="330" bind:__l="__l" bind:change="__e" class="data-v-44baa2f1 vue-ref" current="{{current}}" data-event-opts="{{[ [ '^change',[ ['tabsChange'] ] ] ]}}" data-ref="uTabs" fontSize="32" height="96" inactiveColor="#999999" isScroll="{{false}}" list="{{tabs}}" vueId="2d8e77a0-2"></u-tabs-swiper>
+    </view>
+    <swiper bindanimationfinish="__e" bindtransition="__e" class="swiper-box data-v-44baa2f1" current="{{swiperCurrent}}" data-event-opts="{{[ [ 'transition',[ [ 'transition',['$event'] ] ] ],[ 'animationfinish',[ [ 'animationfinish',['$event'] ] ] ] ]}}" style="{{swiperHeight}}">
+        <swiper-item class="swiper-item data-v-44baa2f1">
+            <scroll-view bindscrolltolower="__e" class="data-v-44baa2f1" data-event-opts="{{[ [ 'scrolltolower',[ [ 'onreachBottom',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="{{swiperHeight}}">
+                <view class="list flex-rsw data-v-44baa2f1" wx:if="{{joinList.length>0}}">
+                    <list-item bind:__l="__l" class="data-v-44baa2f1" item="{{item}}" vueId="{{'2d8e77a0-3-'+i}}" wx:for="{{joinList}}" wx:for-index="i" wx:key="i"></list-item>
+                </view>
+                <view class="empty-box data-v-44baa2f1" style="{{swiperHeight}}" wx:else>
+                    <u-empty bind:__l="__l" class="data-v-44baa2f1" mode="list" vueId="2d8e77a0-4"></u-empty>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item class="swiper-item data-v-44baa2f1">
+            <scroll-view bindscrolltolower="__e" class="data-v-44baa2f1" data-event-opts="{{[ [ 'scrolltolower',[ [ 'onreachBottom',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="{{swiperHeight}}">
+                <view class="list flex-rsw data-v-44baa2f1" wx:if="{{releaseList.length>0}}">
+                    <list-item bind:__l="__l" class="data-v-44baa2f1" item="{{item}}" join="{{false}}" vueId="{{'2d8e77a0-5-'+i}}" wx:for="{{releaseList}}" wx:for-index="i" wx:key="i"></list-item>
+                </view>
+                <view class="empty-box data-v-44baa2f1" style="{{swiperHeight}}" wx:else>
+                    <u-empty bind:__l="__l" class="data-v-44baa2f1" mode="list" vueId="2d8e77a0-6"></u-empty>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+    <u-toast bind:__l="__l" class="data-v-44baa2f1 vue-ref" data-ref="uToast" vueId="2d8e77a0-7"></u-toast>
+</view>
