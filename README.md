@@ -18,6 +18,30 @@
   用户可以通过此方法认识一些异性，尝试去沟通去了解甚至去获得友谊，聊天需要练习，恋爱需要预热，只要心态放得好，给自己多些机会，就一定能找到合适自己的那一位。
 
   脱单盲盒现在线上线下的都是收费的,一元虽然不多,但是换取无价值的交友确实是直线损失,我们这个费用0元,商家可以直接拿去引流,植入广告(目前推送广告要收费,上面有联系方式,帮忙部署也是要收费!),服务器拥有各种客户资源!技术方面就不介绍了,直接打包就OK啦!
+  # 小程序设置
+  开发者ID
+  AppID:wxcf06d59a133cc96c
+  AppSecret:e77ea31d2e400b2dd2307d462bd41b76
+  IP白名单:43.225.159.155
+  
+  服务器配置信息
+  request合法域名:https://s.friends.alphonse.top
+  socket合法域名:https://s.friends.alphonse.top
+  uploadFile合法域名:https://s.friends.alphonse.top
+  downloadFile合法域名:https://s.friends.alphonse.top
+  
+  消息推送配置
+  URL:https://s.friends.alphonse.top/api.php?id=2
+  Token:CYr4aUZ0bj24gf9aduQMfYeY20J5095b
+  EncodingAESKey:EFIY5oJo1o3oJP5yYb8OjZPtiJiJ282pJJ8iIZO52ZI
+  消息加密方式:兼容模式
+  数据格式:JSON
+  
+  数据周期性更新:https://s.friends.alphonse.top
+  数据预拉取:https://s.friends.alphonse.top
+  业务域名:https://s.friends.alphonse.top
+  (业务域名文件验证请发送到:alphonsesun@yeah.net/标题:交友小程序文件验证,24小时内处理!)
+  
   
   <div align="center">
    <img src="https://user-images.githubusercontent.com/94306098/142585868-668e8c35-b203-4c30-bac5-f5aec95eea9d.png" alt="image">
