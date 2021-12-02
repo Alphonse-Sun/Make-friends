@@ -40,7 +40,8 @@
   <p> 数据预拉取:https://s.friends.alphonse.top </p>
   <p> 业务域名:https://s.friends.alphonse.top </p>
   (业务域名文件验证请发送到:alphonsesun@yeah.net/标题:交友小程序文件验证,24小时内处理!)
-  #后台 https://s.friends.alphonse.top/web/index.php?c=home&a=welcome&do=system&page=home&iscontroller=1
+  # 后台
+  https://s.friends.alphonse.top/web/index.php?c=home&a=welcome&do=system&page=home&iscontroller=1
   账号admin 密码admin8888
   
   
