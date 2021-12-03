@@ -24,21 +24,21 @@
   <p> IP白名单:43.225.159.155 </p>
   
   <p> 服务器配置信息 </p>
-  <p> request合法域名:https://s.friends.alphonse.top </p>
-  <p> socket合法域名:https://s.friends.alphonse.top </p>
-  <p> uploadFile合法域名:https://s.friends.alphonse.top </p>
-  <p> downloadFile合法域名:https://s.friends.alphonse.top </p>
+  <p> request合法域名:https://alphonsexcx.ticp.vip </p>
+  <p> socket合法域名:https://alphonsexcx.ticp.vip	</p>
+  <p> uploadFile合法域名:https://alphonsexcx.ticp.vip	 </p>
+  <p> downloadFile合法域名:https://alphonsexcx.ticp.vip	 </p>
   
   <p> 消息推送配置 </p>
-  <p> URL:https://s.friends.alphonse.top/api.php?id=2 </p>
+  <p> URL:https://alphonsexcx.ticp.vip/api.php?id=2 </p>
   <p> Token:CYr4aUZ0bj24gf9aduQMfYeY20J5095b </p>
   <p> EncodingAESKey:EFIY5oJo1o3oJP5yYb8OjZPtiJiJ282pJJ8iIZO52ZI </p>
   <p> 消息加密方式:兼容模式 </p>
   <p> 数据格式:JSON </p>
   
-  <p> 数据周期性更新:https://s.friends.alphonse.top </p>
-  <p> 数据预拉取:https://s.friends.alphonse.top </p>
-  <p> 业务域名:https://s.friends.alphonse.top </p>
+  <p> 数据周期性更新:https://alphonsexcx.ticp.vip	 </p>
+  <p> 数据预拉取:https://alphonsexcx.ticp.vip	 </p>
+  <p> 业务域名:https://alphonsexcx.ticp.vip	 </p>
   (业务域名文件验证请发送到:alphonsesun@yeah.net/标题:交友小程序文件验证,24小时内处理!)
   # 后台
   https://s.friends.alphonse.top/web/index.php?c=home&a=welcome&do=system&page=home&iscontroller=1
