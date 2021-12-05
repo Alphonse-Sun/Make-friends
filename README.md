@@ -2,7 +2,7 @@
 <p align="center">目前代码免费开源,工作联系QQ:1308115931</p>
 
 ![image](https://user-images.githubusercontent.com/94306098/142584261-63e42ebb-1c43-4260-a545-cac05c511631.png)
-![image](https://user-images.githubusercontent.com/94840152/144744149-c6daf516-9508-4896-855b-cfdd2aa4842a.png)
+![image](https://user-images.githubusercontent.com/94840152/144744307-2f16319e-76c5-48c3-8d5c-1b73a372974e.png)
 
 <p align="center">★ 需要重新上传小程序提交审核 ★
 </p><p align="center">
