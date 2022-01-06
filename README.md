@@ -1,5 +1,5 @@
 # 换密盲盒交友小程序
-<p align="center">目前代码免费开源,工作联系TEL：+86755338421131（可接听FaceTime）微信：Alphonse-Sun QQ:1308115931‬</p>
+<p align="center">目前代码免费开源,工作联系TEL：+8675533842131（可接听FaceTime）微信：Alphonse-Sun QQ:1308115931‬</p>
 
 ![image](https://user-images.githubusercontent.com/94306098/142584261-63e42ebb-1c43-4260-a545-cac05c511631.png)
 ![image](https://user-images.githubusercontent.com/94840152/144744307-2f16319e-76c5-48c3-8d5c-1b73a372974e.png)
